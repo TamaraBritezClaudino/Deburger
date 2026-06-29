@@ -13,7 +13,7 @@
         </a>
 
         <nav>
-            <a href="#">Inicio</a>
+            <a href="index.php">Inicio</a>
             <a href="#">Sobre nosotros</a>
             <a href="#">Locales</a>
             <a href="#">Soporte</a>
