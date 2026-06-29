@@ -1,76 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
 </head>
+
 <body>
-    <main>
+    <main class="mainForm">
+        <article>
+            <img src="img/img_registro.png" alt="imgRegistro" class="imgRegistro">
+        </article>
 
-        <section>
-
-            <article>
-
-                <h1>Únete a la experiencia</h1>
-
-                <p>
-                    Crea tu cuenta y disfruta promociones, beneficios y mucho más.
-                </p>
-
-                <img src="img/hamburguesa.png" alt="Hamburguesa">
-
-            </article>
-
-            <article>
-
+        <article class="form">
+            <div>
                 <h2>Crea tu cuenta</h2>
+                <p>Es rápido, facil y gratis</p>
+            </div>
 
-                <form>
+            <form>
+                <div>
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
 
-                    <label for="nombre">Nombre</label><br>
-                    <input type="text" id="nombre" name="nombre"><br><br>
+                    <div>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido">
+                    </div>
 
-                    <label for="apellido">Apellido</label><br>
-                    <input type="text" id="apellido" name="apellido"><br><br>
+                </div>
 
-                    <label for="correo">Correo electrónico</label><br>
-                    <input type="email" id="correo" name="correo"><br><br>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo">
 
-                    <label for="password">Contraseña</label><br>
-                    <input type="password" id="password" name="password"><br><br>
+                <div>
+                    <div>
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password">
 
-                    <label for="confirmar">Confirmar contraseña</label><br>
-                    <input type="password" id="confirmar" name="confirmar"><br><br>
+                    </div>
 
-                    <label for="fecha">Fecha de nacimiento</label><br>
-                    <input type="date" id="fecha" name="fecha"><br><br>
+                    <div>
+                        <label for="confirmar">Confirmar contraseña</label>
+                        <input type="password" id="confirmar" name="confirmar">
+                    </div>
 
-                    <label for="telefono">Teléfono (opcional)</label><br>
-                    <input type="tel" id="telefono" name="telefono"><br><br>
+                </div>
 
-                    <input type="checkbox" id="terminos">
-                    <label for="terminos">
-                        Acepto los términos y condiciones y la política de privacidad.
-                    </label>
+                <div>
+                    <div>
+                        <label for="fecha">Fecha de nacimiento</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
 
-                    <br><br>
+                    <div>
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                </div>
 
-                    <button type="submit">
-                        Registrarme
-                    </button>
+                <button type="submit">
+                    Registrarme
+                </button>
 
-                </form>
+            </form>
 
-                <p>
-                    ¿Ya tienes una cuenta?
-                    <a href="login.html">Inicia sesión</a>
-                </p>
-
-            </article>
-
-        </section>
-
+            <p>
+                ¿Ya tienes una cuenta?
+                <a href="login.php">Inicia sesión</a>
+            </p>
+        </article>
     </main>
 </body>
+
 </html>

@@ -19,8 +19,15 @@
 main{
     display: flex;
     flex-direction: column;
-    gap: 1em;
-    padding: 20px;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon{
+    width: 120px;
 }
 
 /*HEADER*/
@@ -68,7 +75,7 @@ nav a{
 }
 
 nav a:hover{
-    color: #d8472b;
+    color: var(--rojo);
 }
 
 header>a{
@@ -84,25 +91,114 @@ header>a img{
 header>a{
     font-size: 35px;
     font-weight: bold;
-    color: #d8472b;
+    color: var(--rojo);
 }
 
 /*FOOTER*/
 
 footer{
-    background-color: #111;
-
     border-top: 1px solid #222;
-
     padding: 35px 0;
-
     text-align: center;
-
     color: #bbb;
-
     font-size: 15px;
 }
 
 footer p{
     letter-spacing: 1px;
+}
+
+/*Inicio*/
+#carrusel img{
+    width: 100%;
+}
+
+#info{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#info article{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 30%;
+}
+
+#info article div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-right: solid #6d2216 2px;
+    padding-right: 10px;
+}
+
+/*Página Registro*/
+.imgRegistro, .imgLogin{
+    height: 950px;
+}
+
+.mainForm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+}
+
+.mainForm>article{
+    width: 50%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 80%;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form>div>h2{
+    margin-bottom: 10px;
+}
+
+.form form>div{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 100%;
+}
+
+.form form div>div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+input{
+    border: none;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form button{
+    background-color: var(--rojo);
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.form a{
+    color: var(--rojo);
 }
