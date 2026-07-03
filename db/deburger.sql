@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-07-2026 a las 02:20:02
+-- Tiempo de generación: 03-07-2026 a las 05:52:07
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -32,6 +32,16 @@ CREATE TABLE `categorias` (
   `nombre` varchar(100) DEFAULT NULL CHECK (`nombre` in ('hamburguesas','bebidas','combos','acompañamiento'))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id_categoria`, `nombre`) VALUES
+(1, 'hamburguesas'),
+(2, 'bebidas'),
+(3, 'combos'),
+(4, 'acompañamiento');
+
 -- --------------------------------------------------------
 
 --
@@ -54,7 +64,8 @@ CREATE TABLE `clientes` (
 
 INSERT INTO `clientes` (`id_cliente`, `nombre`, `apellido`, `telefono`, `email`, `pass`, `fecha_nacimiento`) VALUES
 (1, 'Ana', 'Reyes', 1131169015, 'ana@ana', '276b6c4692e78d4799c12ada515bc3e4', '8345-09-17'),
-(4, 'fede', 'Reyes', 2147483647, 'fede@fede', 'c4ca4238a0b923820dcc509a6f75849b', '0000-00-00');
+(4, 'fede', 'Reyes', 2147483647, 'fede@fede', 'c4ca4238a0b923820dcc509a6f75849b', '0000-00-00'),
+(5, 'Tamara', 'Britez', 0, 'tami@gmail.com', 'a2a0ac851d64e96e659198bdef179228', '2008-08-22');
 
 -- --------------------------------------------------------
 
@@ -68,6 +79,19 @@ CREATE TABLE `detalle_pedidos` (
   `cantidad` int(11) DEFAULT NULL CHECK (`cantidad` > 0),
   `id_producto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `detalle_pedidos`
+--
+
+INSERT INTO `detalle_pedidos` (`id_detalle`, `id_pedido`, `cantidad`, `id_producto`) VALUES
+(1, 1, 1, 4),
+(2, 1, 1, 3),
+(3, 2, 1, 1),
+(4, 3, 1, 4),
+(5, 4, 1, 5),
+(6, 5, 2, 2),
+(7, 5, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -85,6 +109,17 @@ CREATE TABLE `pedidos` (
   `tipo_entrega` varchar(20) DEFAULT NULL CHECK (`tipo_entrega` in ('Delivery','Retiro'))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `pedidos`
+--
+
+INSERT INTO `pedidos` (`id_pedido`, `id_cliente`, `fecha`, `tipo_pago`, `total`, `estado`, `tipo_entrega`) VALUES
+(1, 1, '2026-07-03', 'Tarjeta', 3700.00, 'Entregado', 'Delivery'),
+(2, 1, '2026-07-03', 'Efectivo', 2500.00, 'Preparando', 'Retiro'),
+(3, 4, '2026-07-03', 'Tarjeta', 3500.00, 'Pendiente', 'Delivery'),
+(4, 4, '2026-07-03', 'Efectivo', 1200.00, 'Cancelado', 'Retiro'),
+(5, 1, '2026-07-03', 'Tarjeta', 5000.00, 'Entregado', 'Delivery');
+
 -- --------------------------------------------------------
 
 --
@@ -98,6 +133,17 @@ CREATE TABLE `productos` (
   `precio` decimal(10,2) DEFAULT NULL CHECK (`precio` >= 0),
   `descripcion` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id_producto`, `nombre`, `id_categoria`, `precio`, `descripcion`) VALUES
+(1, 'Hamburguesa Clásica', 1, 5000.00, 'Carne, lechuga, tomate y queso'),
+(2, 'Hamburguesa Doble', 1, 6000.00, 'Doble carne y queso'),
+(3, 'Coca Cola', 2, 900.00, 'Bebida 500ml'),
+(4, 'Combo Clásico', 3, 9500.00, 'Hamburguesa + papas + bebida'),
+(5, 'Papas Fritas', 4, 2200.00, 'Porción grande de papas');
 
 --
 -- Índices para tablas volcadas
@@ -146,31 +192,31 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedidos`
 --
 ALTER TABLE `detalle_pedidos`
-  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
