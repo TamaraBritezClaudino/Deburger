@@ -18,8 +18,20 @@
             <a href="#">Locales</a>
             <a href="#">Soporte</a>
         </nav>
-
+<?php
+session_start();
+if(isset($_SESSION['usuario'])){
+?>
+        <a href="#" class="btnHeader"><?php echo $_SESSION['usuario']['nombre']?></a>
+         <a href="cerrar_sesion.php" class="btnHeader">Cerrar Sesion</a>
+        <?php
+        
+        }else{
+            ?>
         <a href="login.php" class="btnHeader">Iniciar sesión</a>
+        <?php 
+        }
+        ?>
     </header>
 
     <?php

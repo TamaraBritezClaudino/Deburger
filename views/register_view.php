@@ -19,7 +19,7 @@
                 <p>Es rápido, facil y gratis</p>
             </div>
 
-            <form>
+            <form method="post">
                 <div>
                     <div>
                         <label for="nombre">Nombre</label>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
 
-                <button type="submit">
+                <button type="submit" name="submit">
                     Registrarme
                 </button>
 

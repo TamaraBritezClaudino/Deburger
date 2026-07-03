@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-06-2026 a las 19:13:17
+-- Tiempo de generación: 03-07-2026 a las 02:20:02
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -41,10 +41,20 @@ CREATE TABLE `categorias` (
 CREATE TABLE `clientes` (
   `id_cliente` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
+  `apellido` varchar(255) NOT NULL,
   `telefono` int(11) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
+  `pass` varchar(255) NOT NULL,
   `fecha_nacimiento` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id_cliente`, `nombre`, `apellido`, `telefono`, `email`, `pass`, `fecha_nacimiento`) VALUES
+(1, 'Ana', 'Reyes', 1131169015, 'ana@ana', '276b6c4692e78d4799c12ada515bc3e4', '8345-09-17'),
+(4, 'fede', 'Reyes', 2147483647, 'fede@fede', 'c4ca4238a0b923820dcc509a6f75849b', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -142,7 +152,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedidos`

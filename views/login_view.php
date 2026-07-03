@@ -22,14 +22,14 @@
                 </p>
             </div>
 
-            <form>
+            <form method="post">
                 <label for="correo">Correo electrónico</label>
                 <input type="email" id="correo" name="correo">
 
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="password">
 
-                <button type="submit">
+                <button type="submit" name="submit">
                     Iniciar sesión
                 </button>
 
