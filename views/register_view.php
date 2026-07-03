@@ -36,19 +36,8 @@
                 <label for="correo">Correo electrónico</label>
                 <input type="email" id="correo" name="correo">
 
-                <div>
-                    <div>
-                        <label for="password">Contraseña</label>
-                        <input type="password" id="password" name="password">
-
-                    </div>
-
-                    <div>
-                        <label for="confirmar">Confirmar contraseña</label>
-                        <input type="password" id="confirmar" name="confirmar">
-                    </div>
-
-                </div>
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password">
 
                 <div>
                     <div>

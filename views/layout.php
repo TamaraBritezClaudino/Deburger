@@ -4,12 +4,13 @@
     <link href="css/styles.css" rel="stylesheet">
     <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="img/deburger_icon.png">
 </head>
 
 <body>
     <header>
         <a href="index.php">
-            <img src="img/logoDeburger.png" alt="Logo Deburger">
+            <img src="img/Deburger.png" alt="Logo Deburger">
         </a>
 
         <nav>
@@ -22,8 +23,9 @@
 session_start();
 if(isset($_SESSION['usuario'])){
 ?>
-        <a href="#" class="btnHeader"><?php echo $_SESSION['usuario']['nombre']?></a>
-         <a href="cerrar_sesion.php" class="btnHeader">Cerrar Sesion</a>
+        <i class="bi bi-person-fill"></i>
+        <a href="#" class="NomUser"><?php echo $_SESSION['usuario']['nombre']?></a>
+         <a href="cerrar_sesion.php" class="btnHeader cerrar">Cerrar Sesion</a>
         <?php
         
         }else{
