@@ -16,8 +16,8 @@
         <nav>
             <a href="index.php">Inicio</a>
             <a href="aboutUs.php">Sobre nosotros</a>
-            <a href="#">Locales</a>
-            <a href="#">Soporte</a>
+            <a href="locals.php">Locales</a>
+            <a href="support.php">Soporte</a>
         </nav>
 <?php
 session_start();
