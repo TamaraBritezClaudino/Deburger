@@ -15,7 +15,7 @@
 
         <nav>
             <a href="index.php">Inicio</a>
-            <a href="#">Sobre nosotros</a>
+            <a href="aboutUs.php">Sobre nosotros</a>
             <a href="#">Locales</a>
             <a href="#">Soporte</a>
         </nav>
