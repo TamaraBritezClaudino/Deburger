@@ -12,8 +12,9 @@
 
     <div class="buscar">
         <i class="bi bi-search"></i>
+
         <form action="">
-            <input type="search" name="" id=""> <!--zona en la q la persona podra buscar una sucursal-->
+            <input type="search" name="" id="" placeholder="Buscar local"> <!--zona en la q la persona podra buscar una sucursal-->
         </form>
     </div>
 
@@ -38,7 +39,7 @@
                 </div>
             </div>
 
-            <button>Ver mapa</button> <!--boton q deberia dirijirte a la direccion del local-->
+            <a href="" class="btnHeader">Ver mapa</a> <!--boton q deberia dirijirte a la direccion del local-->
         </div>
     </section>
 </main>

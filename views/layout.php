@@ -1,11 +1,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="css/styles.css" rel="stylesheet">
+
     <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
     <link rel="icon" type="image/png" href="img/deburger_icon.png">
 </head>
+
 
 <body>
     <header>
@@ -15,26 +21,64 @@
 
         <nav>
             <a href="index.php">Inicio</a>
-            <a href="aboutUs.php">Sobre nosotros</a>
+            <a href="takeAway.php">Hace tu pedido</a>
             <a href="locals.php">Locales</a>
             <a href="support.php">Soporte</a>
         </nav>
-<?php
-session_start();
-if(isset($_SESSION['usuario'])){
-?>
-        <i class="bi bi-person-fill"></i>
-        <a href="#" class="NomUser"><?php echo $_SESSION['usuario']['nombre']?></a>
-         <a href="cerrar_sesion.php" class="btnHeader cerrar">Cerrar Sesion</a>
+
         <?php
-        
-        }else{
-            ?>
-        <a href="login.php" class="btnHeader">Iniciar sesión</a>
-        <?php 
+        session_start();
+        if (isset($_SESSION['usuario'])) { ?>
+
+            <i class="bi bi-person-fill"></i>
+
+            <a href="#" class="NomUser"><?php echo $_SESSION['usuario']['nombre'] ?></a>
+
+            <a href="cerrar_sesion.php" class="btnHeader cerrar">Cerrar Sesion</a>
+
+        <?php
+        } else {
+        ?>
+            <a href="login.php" class="btnHeader">Iniciar sesión</a>
+        <?php
         }
         ?>
+
+        <div class="cart-icon">
+            <i class="bi bi-cart"></i>
+            <span>0</span> <!--Cantidad de productos pedidos-->
+        </div>
     </header>
+
+<!--Carrito-->
+    <div class="sidebar" id="sidebar">
+
+    <div class="sidebar-close">
+        <i class="bi bi-x-lg"></i>
+    </div>
+
+    <div class="cart-menu">
+        <h3>Mi carrito</h3>
+
+        <div class="cart-items">
+            <!-- Acá JavaScript va a poner los productos -->
+        </div>
+
+        <div class="sidebar--footer">
+            <div class="total--amount">
+                <h5>Total</h5>
+                <div class="cart-total">
+                    $0.00
+                </div>
+            </div>
+
+            <button class="checkout-btn">
+                Realizar compra
+            </button>
+        </div>
+    </div>
+
+</div>
 
     <?php
     $section = (isset($section)) ? $section : 'home';
