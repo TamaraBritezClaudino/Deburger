@@ -43,6 +43,10 @@ if(isset($_SESSION['usuario'])){
 
     <footer>
         <p>© 2026 Deburger</p>
+        <div>
+            <a href="">Terminos de uso</a>
+            <a href="">Politicas de privacidad</a>
+        </div>
     </footer>
 </body>
 
