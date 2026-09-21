@@ -50,35 +50,40 @@
         </div>
     </header>
 
-<!--Carrito-->
+    <!--Carrito-->
     <div class="sidebar" id="sidebar">
 
-    <div class="sidebar-close">
-        <i class="bi bi-x-lg"></i>
-    </div>
-
-    <div class="cart-menu">
-        <h3>Mi carrito</h3>
-
-        <div class="cart-items">
-            <!-- Acá JavaScript va a poner los productos -->
+        <div class="sidebar-close">
+            <i class="bi bi-x-lg"></i>
         </div>
 
-        <div class="sidebar--footer">
-            <div class="total--amount">
-                <h5>Total</h5>
-                <div class="cart-total">
-                    $0.00
-                </div>
+        <div class="cart-menu">
+            <h3>
+                <i class="bi bi-bag"></i>
+                Mi Pedido
+                <span class="cart-number">0</span>
+            </h3>
+
+            <div class="cart-items">
+                <!-- JavaScript agrega los productos acá -->
             </div>
 
-            <button class="checkout-btn">
-                Realizar compra
-            </button>
+            <div class="sidebar--footer">
+
+                <div class="total--amount">
+                    <h5>Total del Carrito</h5>
+
+                    <div class="cart-total">
+                        $0.00
+                    </div>
+                </div>
+
+                <button class="checkout-btn">Confirmar compra</button>
+                <button class="continue-btn">Seguir Comprando</button>
+
+            </div>
         </div>
     </div>
-
-</div>
 
     <?php
     $section = (isset($section)) ? $section : 'home';

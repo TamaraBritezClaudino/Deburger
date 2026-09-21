@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     const cartItemCount = document.querySelector('.cart-icon span');
+    const cartNumber = document.querySelector('.cart-number');
     const cartItemList = document.querySelector('.cart-items');
     const cartTotal = document.querySelector('.cart-total');
     const cartIcon = document.querySelector('.cart-icon');
     const sidebar = document.getElementById('sidebar');
     const closeButton = document.querySelector('.sidebar-close');
+    const continueButton = document.querySelector('.continue-btn');
 
     let cartItems = [];
     let totalAmount = 0;
@@ -15,16 +16,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
         button.addEventListener('click', () => {
 
-            const itemName = document.querySelectorAll('.card .card-title')[index].textContent;
+            const cards = document.querySelectorAll('.card');
+
+            const card = cards[index];
+
+            const itemName =
+                card.querySelector('.card-title').textContent;
 
             const itemPrice = parseFloat(
-                document.querySelectorAll('.price')[index].textContent
+                card.querySelector('.price').textContent
                     .replace('$', '')
+                    .replace('.', '')
+                    .replace(',', '.')
             );
+
+            const image = card.querySelector('img');
+
+            const itemImage = image
+                ? image.src
+                : '';
+
+            const descriptionElement =
+                card.querySelector('.card-description');
+
+            const itemDescription = descriptionElement
+                ? descriptionElement.textContent
+                : 'Producto seleccionado';
+
 
             const item = {
                 name: itemName,
                 price: itemPrice,
+                image: itemImage,
+                description: itemDescription,
                 quantity: 1
             };
 
@@ -34,35 +58,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (existingItem) {
                 existingItem.quantity++;
-            } else {
+            } 
+
+            else {
+
                 cartItems.push(item);
             }
 
             totalAmount += item.price;
-
             updateCartUI();
         });
+
     });
 
     function updateCartUI() {
+
         updateCartItemCount();
         updateCartItemList();
         updateCartTotal();
     }
 
     function updateCartItemCount() {
-        cartItemCount.textContent = cartItems.reduce(
+        const quantity = cartItems.reduce(
             (total, item) => total + item.quantity,
             0
         );
+
+        cartItemCount.textContent = quantity;
+
+        if (cartNumber) {
+            cartNumber.textContent = quantity;
+        }
     }
 
     function updateCartItemList() {
-
         cartItemList.innerHTML = '';
 
         cartItems.forEach((item, index) => {
-
             const cartItem = document.createElement('div');
 
             cartItem.classList.add(
@@ -71,60 +103,128 @@ document.addEventListener('DOMContentLoaded', () => {
             );
 
             cartItem.innerHTML = `
-                <span>
-                    (${item.quantity}x) ${item.name}
-                </span>
+                <div class="cart-item-image">
+                    <img src="${item.image}" alt="${item.name}">
+                </div>
 
-                <span class="cart-item-price">
-                    $${(item.price * item.quantity).toFixed(2)}
+                <div class="cart-item-info">
+                    <h4>${item.name}</h4>
+                    <p>${item.description}</p>
 
-                    <button
-                        class="remove-item"
-                        data-index="${index}">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
-                </span>
+                    <div class="cart-item-bottom">
+                        <div class="quantity-controls">
+                            <button
+                                class="quantity-btn decrease"
+                                data-index="${index}">
+                                −
+                            </button>
+
+                            <span>
+                                ${item.quantity}
+                            </span>
+
+                            <button
+                                class="quantity-btn increase"
+                                data-index="${index}">
+                                +
+                            </button>
+                        </div>
+
+                        <strong class="cart-item-price">
+                            $${formatPrice(item.price * item.quantity)}
+                        </strong>
+
+                        <button class="remove-item" data-index="${index}">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                    </div>
+                </div>
             `;
 
             cartItemList.appendChild(cartItem);
         });
+        addQuantityEvents();
+        addRemoveEvents();
+    }
 
+    function addQuantityEvents() {
+
+        const increaseButtons =
+            document.querySelectorAll('.increase');
+
+        const decreaseButtons =
+            document.querySelectorAll('.decrease');
+
+
+        increaseButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const index = button.dataset.index;
+                cartItems[index].quantity++;
+                totalAmount += cartItems[index].price;
+                updateCartUI();
+            });
+        });
+
+        decreaseButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const index = button.dataset.index;
+                const item = cartItems[index];
+
+                if (item.quantity > 1) {
+                    item.quantity--;
+                    totalAmount -= item.price;
+                } 
+                else {
+                    totalAmount -= item.price;
+                    cartItems.splice(index, 1);
+                }
+
+                updateCartUI();
+            });
+
+        });
+
+    }
+
+    function addRemoveEvents() {
         const removeButtons =
             document.querySelectorAll('.remove-item');
 
-        removeButtons.forEach((button) => {
-
-            button.addEventListener('click', (event) => {
-
-                const index =
-                    event.currentTarget.dataset.index;
-
+        removeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const index = button.dataset.index;
                 removeItemFromCart(index);
             });
         });
     }
 
     function removeItemFromCart(index) {
-
         const removeItem = cartItems.splice(index, 1)[0];
-
-        totalAmount -=
-            removeItem.price * removeItem.quantity;
-
+        totalAmount -= removeItem.price * removeItem.quantity;
         updateCartUI();
     }
 
+    function formatPrice(price) {
+        return price.toLocaleString('es-AR', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        });
+    }
+
     function updateCartTotal() {
-        cartTotal.textContent =
-            `$${totalAmount.toFixed(2)}`;
+        cartTotal.textContent = `$${formatPrice(totalAmount)}`;
     }
 
     cartIcon.addEventListener('click', () => {
         sidebar.classList.toggle('open');
     });
 
+
     closeButton.addEventListener('click', () => {
         sidebar.classList.remove('open');
     });
 
+    continueButton.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+    });
 });
