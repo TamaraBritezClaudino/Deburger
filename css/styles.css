@@ -103,7 +103,7 @@ header>a {
     padding: 10px;
 }
 
-.cart-icon{
+.cart-icon {
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -111,7 +111,7 @@ header>a {
     justify-content: center;
 }
 
-.cart-icon i{
+.cart-icon i {
     background-color: var(--rojo);
     padding: 10px;
     border-radius: 20px;
@@ -119,7 +119,7 @@ header>a {
     transition: 0.3 ease;
 }
 
-.cart-icon i:hover{
+.cart-icon i:hover {
     background-color: white;
     color: var(--rojo);
 }
@@ -158,11 +158,22 @@ footer a:hover {
 }
 
 /*Carrito*/
-.cart-icon{
+.cart-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.cart-menu h3{
+    border-bottom: 1px solid white;
+}
+
+.cart-icon {
     position: relative;
 }
 
-.cart-icon span{
+.cart-icon span {
     background-color: white;
     color: var(--rojo);
     border-radius: 50%;
@@ -178,7 +189,7 @@ footer a:hover {
     top: -5px;
 }
 
-.sidebar{
+.sidebar {
     width: 400px;
     height: 100%;
     position: fixed;
@@ -193,74 +204,94 @@ footer a:hover {
     border-bottom-left-radius: 20px;
 }
 
-.sidebar.open{
+.sidebar--footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-top: white solid 2px;
+}
+
+.sidebar.open {
     right: 0;
 }
-.side-close{
+
+.side-close {
     position: absolute;
     right: 20px;
     top: 10px;
     cursor: pointer;
 }
 
-.cart-items{
+.cart-items {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 1rem;
-    border: 1px solid white;
 }
 
-.individual-cart-tems{
+.individual-cart-tems {
     display: flex;
     justify-content: space-between;
     padding: 10px 5px;
     border-radius: 5px;
 }
 
-.cart-tems-price{
+.cart-tems-price {
     color: #222;
 }
 
-.sidebar--footer{
-    position: absolute;
-    bottom: 10px;
-    width: 80%;
-}
-
-.total--amount{
+.total--amount {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid white;
     border-radius: 5px;
     padding: 15px 10px;
 }
-.cart-total{
-    font-size: 16px;
+
+.cart-total {
     color: white;
     font-weight: 500;
 }
 
-.checkout-btn{
+.cart-item-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.checkout-btn, .continue-btn:hover{
     width: 100%;
-    margin-top: 2rem;
     background-color: var(--rojo);
     color: white;
     border-radius: 5px;
     cursor: pointer;
     padding: 10px;
-    color: white;
+    border: none;
+}
+
+.continue-btn, .checkout-btn:hover{
+    width: 100%;
+    background-color: white;
+    color: var(--rojo);
     border-radius: 5px;
     cursor: pointer;
+    padding: 10px;
+    border: none;
 }
-.remove-item{
+
+.remove-item, .quantity-btn {
     background-color: var(--rojo);
     color: white;
     border-radius: 5px;
     padding: 2px 8px;
     cursor: pointer;
-    margin-left: 5px;
+    border: none;
+}
+
+.cart-item-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /*-------------PÁGINA INICIO------------------*/
@@ -360,7 +391,7 @@ input {
 }
 
 /*-------------PÁGINA LOCALES---------------*/
-#mainLocales{
+#mainLocales {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -431,7 +462,7 @@ input {
     align-items: center;
 }
 
-.menuSeccion h2{
+.menuSeccion h2 {
     background-color: var(--rojo);
     padding: 5px;
     text-align: center;
@@ -446,7 +477,7 @@ input {
     max-width: 1000px;
 }
 
-.tarjetaMenu {
+.tarjetaMenu, .individual-cart-item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -456,26 +487,26 @@ input {
     overflow: hidden;
 }
 
-.tarjetaMenu img{
+.tarjetaMenu img {
     background-color: gainsboro;
     width: 30%;
     height: 100%;
     overflow: hidden;
 }
 
-.tarjetaMenu div{
+.tarjetaMenu div, .individual-cart-item>div {
     padding: 10px 5px;
     width: 70%;
 }
 
-.tarjetaMenu div>div{
+.tarjetaMenu div>div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
 
-.tarjetaMenu i{
+.tarjetaMenu i {
     background-color: var(--rojo);
     padding: 2px 6px;
     border-radius: 3px;

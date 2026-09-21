@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (existingItem) {
                 existingItem.quantity++;
-            } 
+            }
 
             else {
 
@@ -111,6 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h4>${item.name}</h4>
                     <p>${item.description}</p>
 
+                    <strong class="cart-item-price">
+                        $${formatPrice(item.price * item.quantity)}
+                    </strong>
+                
                     <div class="cart-item-bottom">
                         <div class="quantity-controls">
                             <button
@@ -129,10 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                 +
                             </button>
                         </div>
-
-                        <strong class="cart-item-price">
-                            $${formatPrice(item.price * item.quantity)}
-                        </strong>
 
                         <button class="remove-item" data-index="${index}">
                             <i class="bi bi-trash3"></i>
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (item.quantity > 1) {
                     item.quantity--;
                     totalAmount -= item.price;
-                } 
+                }
                 else {
                     totalAmount -= item.price;
                     cartItems.splice(index, 1);

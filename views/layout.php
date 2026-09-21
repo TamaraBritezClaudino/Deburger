@@ -52,24 +52,24 @@
 
     <!--Carrito-->
     <div class="sidebar" id="sidebar">
-
         <div class="sidebar-close">
             <i class="bi bi-x-lg"></i>
         </div>
 
         <div class="cart-menu">
-            <h3>
-                <i class="bi bi-bag"></i>
-                Mi Pedido
-                <span class="cart-number">0</span>
-            </h3>
+            <div>
+                <h3>
+                    <i class="bi bi-bag"></i>
+                    Mi Pedido
+                    <span class="cart-number">0</span>
+                </h3>
 
-            <div class="cart-items">
-                <!-- JavaScript agrega los productos acá -->
+                <div class="cart-items">
+                    <!-- JavaScript agrega los productos acá -->
+                </div>
             </div>
 
             <div class="sidebar--footer">
-
                 <div class="total--amount">
                     <h5>Total del Carrito</h5>
 
@@ -77,10 +77,8 @@
                         $0.00
                     </div>
                 </div>
-
                 <button class="checkout-btn">Confirmar compra</button>
                 <button class="continue-btn">Seguir Comprando</button>
-
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@
                 <div class="card tarjetaMenu">
                     <img src="" alt="">
                     <div>
-                        <h3 class="card-title">Nombre producto</h3>
+                        <h3 class="card-title">Nombre producto 1</h3>
                         <p>Lorem impsum dolor sin amet bla bla bla bla bla</p>
                         <div>
                             <p class="price">$30000</p>
@@ -30,7 +30,7 @@
                 <div class="card tarjetaMenu">
                     <img src="" alt="">
                     <div>
-                        <h3 class="card-title">Nombre producto</h3>
+                        <h3 class="card-title">Nombre producto 2</h3>
                         <p>Lorem impsum dolor sin amet bla bla bla bla bla</p>
                         <div>
                             <p class="price">$30000</p>
@@ -42,7 +42,7 @@
                 <div class="card tarjetaMenu">
                     <img src="" alt="">
                     <div>
-                        <h3 class="card-title">Nombre producto</h3>
+                        <h3 class="card-title">Nombre producto 3</h3>
                         <p>Lorem impsum dolor sin amet bla bla bla bla bla</p>
                         <div>
                             <p class="price">$30000</p>
