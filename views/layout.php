@@ -29,13 +29,38 @@
         <?php
         session_start();
         if (isset($_SESSION['usuario'])) { ?>
+            <div class="usuario" onclick="toggleMenu()">
+                <i class="bi bi-person-fill"></i>
 
-            <i class="bi bi-person-fill"></i>
+                <p class="NomUser"><?php echo $_SESSION['usuario']['nombre'] ?></p> <!--Donde deberia ir el menu desplegable wa-->
+            </div>
 
-            <a href="#" class="NomUser"><?php echo $_SESSION['usuario']['nombre'] ?></a>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <i class="bi bi-person-fill"></i>
+                        <p class="NomUser"><?php echo $_SESSION['usuario']['nombre'] ?></p>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <i class="bi bi-gear"></i>
+                        <p>Configuración</p>
+                        <span>></span>
+                    </a>
 
-            <a href="cerrar_sesion.php" class="btnHeader cerrar">Cerrar Sesion</a>
+                    <a href="#" class="sub-menu-link">
+                        <i class="bi bi-question-circle"></i>
+                        <p>Soporte</p>
+                        <span>></span>
+                    </a>
 
+                    <a href="cerrar_sesion.php" class="sub-menu-link">
+                        <i class="bi bi-box-arrow-left"></i>
+                        <p>Cerrar sesión</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
         <?php
         } else {
         ?>
