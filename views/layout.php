@@ -42,13 +42,13 @@
                         <p class="NomUser"><?php echo $_SESSION['usuario']['nombre'] ?></p>
                     </div>
                     <hr>
-                    <a href="#" class="sub-menu-link">
+                    <a href="configuration.php" class="sub-menu-link">
                         <i class="bi bi-gear"></i>
                         <p>Configuración</p>
                         <span>></span>
                     </a>
 
-                    <a href="#" class="sub-menu-link">
+                    <a href="support.php" class="sub-menu-link">
                         <i class="bi bi-question-circle"></i>
                         <p>Soporte</p>
                         <span>></span>
