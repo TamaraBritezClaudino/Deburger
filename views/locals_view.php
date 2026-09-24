@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <a href="" class="btnHeader">Ver mapa</a> <!--boton q deberia dirijirte a la direccion del local-->
+            <a href="" class="btnRojo">Ver mapa</a> <!--boton q deberia dirijirte a la direccion del local-->
         </div>
     </section>
 </main>

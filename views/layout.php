@@ -71,7 +71,7 @@
         <?php
         } else {
         ?>
-            <a href="login.php" class="btnHeader">Iniciar sesión</a>
+            <a href="login.php" class="btnRojo">Iniciar sesión</a>
         <?php
         }
         ?>
@@ -109,8 +109,8 @@
                         $0.00
                     </div>
                 </div>
-                <button class="checkout-btn">Confirmar compra</button>
-                <button class="continue-btn">Seguir Comprando</button>
+                <button class="checkout-btn btnRojo">Confirmar compra</button>
+                <button class="continue-btn btnBlanco">Seguir Comprando</button>
             </div>
         </div>
     </div>

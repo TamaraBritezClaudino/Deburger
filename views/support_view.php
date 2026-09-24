@@ -4,48 +4,55 @@
     <title>Soporte</title>
 </head>
 
-<main>
-    <article class="form">
-        <div>
-            <h2>Realizar un reclamo</h2>
-            <p>Si tu pedido fue online y tenes algun inconveniente, completa el siguiente formulario</p>
-        </div>
+<main id="mainSoporte">
+    <section id="banner">
+        <h1>Soporte</h1>
+        <p>¡Bienvenido!<br>¿En qué podemos ayudarte?</p>
+    </section>
 
-        <form method="post">
-            <div>
-                <label for="nombre">Nombre y apellido</label>
-                <input type="text" id="nombre" name="nombre">
-            </div>
-
-            <div>
+    <section id="ayuda">
+        <section id="tarjetasSoporte">
+            <a href="">
+                <i class="bi bi-question-circle"></i>
                 <div>
-                    <label for="correo">Correo electrónico</label>
-                    <input type="email" name="correo" id="correo">
+                    <h2>Preguntas frecuentes</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, dui fringilla metus maecenas erat sem malesuada, vestibulum id sociosqu vulputate eros scelerisque eget. Eget mattis odio fames ullamcorper mollis tristique himenaeos metus, inceptos convallis phasellus malesuada turpis pellentesque mauris litora aliquam, volutpat per platea arcu ligula sed vestibulum. </p>
                 </div>
+            </a>
 
+            <a href="">
+                <i class="bi bi-shield-lock"></i>
                 <div>
-                    <label for="telefono">Teléfono (opcional)</label>
-                    <input type="tel" id="telefono" name="telefono">
+                    <h2>Politicas de privacidad</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, dui fringilla metus maecenas erat sem malesuada, vestibulum id sociosqu vulputate eros scelerisque eget. Eget mattis odio fames ullamcorper mollis tristique himenaeos metus, inceptos convallis phasellus malesuada turpis pellentesque mauris litora aliquam, volutpat per platea arcu ligula sed vestibulum. </p>
+                </div>
+            </a>
+
+            <a href="">
+                <i class="bi bi-journal-text"></i>
+                <div>
+                    <h2>Terminos de uso</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, dui fringilla metus maecenas erat sem malesuada, vestibulum id sociosqu vulputate eros scelerisque eget. Eget mattis odio fames ullamcorper mollis tristique himenaeos metus, inceptos convallis phasellus malesuada turpis pellentesque mauris litora aliquam, volutpat per platea arcu ligula sed vestibulum. </p>
+                </div>
+            </a>
+        </section>
+
+        <section>
+            <div class="ayuda">
+                <h3>¿Necesitas más ayuda?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, dui fringilla metus maecenas erat sem malesuada, vestibulum id sociosqu vulputate eros scelerisque eget.</p>
+                <a href="contactSupport.php" class="btnRojo">Contactar con soporte</a>
+                <hr>
+                <h4>Detalle de contacto</h4>
+                <div>
+                    <i class="bi bi-envelope"></i>
+                    <p>soporte@deburger.com</p>
+                </div>
+                <div>
+                    <i class="bi bi-telephone"></i>
+                    <p>xx-xxxxxxx</p>
                 </div>
             </div>
-
-            <div>
-                <label for="reclamo">Detalle de tu reclamo</label>
-                <textarea name="reclamo" id="reclamo"></textarea>
-            </div>
-
-            <button type="submit" name="submit">
-                <p>Enviar</p>
-                <i class="bi bi-arrow-right"></i>
-            </button>
-
-        </form>
-
-        <p>
-            ¿Ya tienes una cuenta?
-            <a href="login.php">Inicia sesión</a>
-        </p>
-    </article>
-
-<!--A partir de aca podriamos poner preguntas frecuentes y medio de contacto... tengo sueño, me quiero jubilar y ni empece a trabajar AHHHHHHHHHHHHHHHHHHHHHHHHHHHH-->
+        </section>
+    </section>
 </main>

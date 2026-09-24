@@ -41,8 +41,25 @@ a {
     width: 120px;
 }
 
-/*-----------------HEADER-------------------*/
+.btnRojo, .btnBlanco:hover{
+    background-color: var(--rojo);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+}
 
+.btnBlanco, .btnRojo:hover{
+    background-color: white;
+    color: var(--rojo);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+}
+
+/*-----------------HEADER-------------------*/
 header {
     width: 100%;
     height: 90px;
@@ -54,22 +71,9 @@ header {
     background-color: var(--grisOscuro);
 }
 
-.btnHeader {
-    background-color: var(--rojo);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 14px 28px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .3s;
+header .btnRojo{
+    font-size: 20px;
     margin-right: 10px;
-}
-
-.btnHeader:hover {
-    background-color: white;
-    color: var(--rojo);
 }
 
 nav {
@@ -360,35 +364,6 @@ footer a:hover {
     gap: 5px;
 }
 
-.checkout-btn, .continue-btn:hover{
-    width: 100%;
-    background-color: var(--rojo);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-}
-
-.continue-btn, .checkout-btn:hover{
-    width: 100%;
-    background-color: white;
-    color: var(--rojo);
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-}
-
-.remove-item, .quantity-btn {
-    background-color: var(--rojo);
-    color: white;
-    border-radius: 5px;
-    padding: 2px 8px;
-    cursor: pointer;
-    border: none;
-}
-
 .cart-item-bottom{
     display: flex;
     flex-direction: row;
@@ -471,7 +446,7 @@ form {
     gap: 10px;
 }
 
-input {
+input, textarea {
     border: none;
     background-color: #1f1f1f;
     padding: 20px;
@@ -691,3 +666,48 @@ input {
     gap: 1em;
     padding: 20px;
 }
+
+/*-------------PÁGINA SOPORTE---------------*/
+#banner{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 5%;
+}
+
+#ayuda{
+    display: flex;
+    flex-direction: row;
+}
+
+#ayuda section{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    gap: 3em;
+}
+
+#ayuda section>div{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#ayuda section>div>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+#ayuda section>div a{
+    padding: 0 auto;
+    border-radius: 40px;
+    font-weight: 400;
+}
+
+/*-------------PÁGINA SOPORTE CONTACTO---------------*/

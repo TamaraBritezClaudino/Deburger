@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="cart-item-bottom">
                         <div class="quantity-controls">
                             <button
-                                class="quantity-btn decrease"
+                                class="quantity-btn decrease btnRojo"
                                 data-index="${index}">
                                 −
                             </button>
@@ -128,13 +128,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             </span>
 
                             <button
-                                class="quantity-btn increase"
+                                class="quantity-btn increase btnRojo"
                                 data-index="${index}">
                                 +
                             </button>
                         </div>
 
-                        <button class="remove-item" data-index="${index}">
+                        <button class="remove-item btnRojo" data-index="${index}">
                             <i class="bi bi-trash3"></i>
                         </button>
                     </div>
