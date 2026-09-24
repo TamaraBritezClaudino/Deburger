@@ -4,10 +4,22 @@
     <title>Soporte</title>
 </head>
 
-<main>
+<main id="contactSuportMain">
     <section>
-
+        <i class="bi bi-envelope"></i>
+        <h1>Soporte</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, dui fringilla metus maecenas erat sem malesuada, vestibulum id sociosqu vulputate eros scelerisque eget. Eget mattis odio fames ullamcorper mollis tristique himenaeos metus, inceptos convallis phasellus malesuada turpis pellentesque mauris litora aliquam, volutpat per platea arcu ligula sed vestibulum.</p>
+        <hr>
+        <div>
+            <i class="bi bi-envelope"></i>
+            <p>soporte@deburger.com</p>
+        </div>
+        <div>
+            <i class="bi bi-telephone"></i>
+            <p>xx-xxxxxxx</p>
+        </div>
     </section>
+
     <section class="form">
         <div>
             <h2>Realizar un reclamo</h2>

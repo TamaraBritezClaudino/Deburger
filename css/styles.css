@@ -711,3 +711,8 @@ input, textarea {
 }
 
 /*-------------PÁGINA SOPORTE CONTACTO---------------*/
+#contactSuportMain{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+}
