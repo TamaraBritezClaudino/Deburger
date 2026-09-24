@@ -32,17 +32,24 @@
             <div class="usuario" onclick="toggleMenu()">
                 <i class="bi bi-person-fill"></i>
 
-                <p class="NomUser"><?php echo $_SESSION['usuario']['nombre'] ?></p> <!--Donde deberia ir el menu desplegable wa-->
+                <p class="NomUser"><?php echo $_SESSION['usuario']['nombre'] ?> <?php echo $_SESSION['usuario']['apellido'] ?></p> <!--Donde deberia ir el menu desplegable wa-->
             </div>
 
             <div class="sub-menu-wrap" id="subMenu">
                 <div class="sub-menu">
                     <div class="user-info">
                         <i class="bi bi-person-fill"></i>
-                        <p class="NomUser"><?php echo $_SESSION['usuario']['nombre'] ?></p>
+                        <p class="NomUser"><?php echo $_SESSION['usuario']['nombre'] ?> <?php echo $_SESSION['usuario']['apellido'] ?></p>
                     </div>
                     <hr>
-                    <a href="configuration.php" class="sub-menu-link">
+
+                    <a href="orders.php" class="sub-menu-link">
+                        <i class="bi bi-clock"></i>
+                        <p>Mis pedidos</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="config.php" class="sub-menu-link">
                         <i class="bi bi-gear"></i>
                         <p>Configuración</p>
                         <span>></span>

@@ -64,6 +64,7 @@ header {
     font-weight: bold;
     cursor: pointer;
     transition: .3s;
+    margin-right: 10px;
 }
 
 .btnHeader:hover {
@@ -610,4 +611,83 @@ input {
     background-color: var(--rojo);
     padding: 2px 6px;
     border-radius: 3px;
+}
+
+/*-----------PÁGINA CONFIGURACIÓN------------*/
+#mainConfig, #mainOrders{
+    padding: 20px;
+}
+
+#mainConfig>div, #mainOrders>div{
+    width: 50%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid white;
+}
+
+.datos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cambiarDatos input{
+    margin: 10px;
+}
+
+.cambiarDatos .botones{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin: 10px 0 0 0;
+}
+
+.datos button, .confirmarbtn{
+    background-color: var(--rojo);
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.cancelarbtn{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.cancelarbtn p, .cancelarbtn i{
+    color: var(--rojo);
+}
+
+.datosSec{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+.datosSec>div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/*-----------PÁGINA PEDIDOS------------*/
+#mainOrders>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 20px;
 }

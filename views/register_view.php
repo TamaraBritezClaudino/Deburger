@@ -19,18 +19,18 @@
             <div>
                 <div>
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre">
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
                 </div>
 
                 <div>
                     <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido">
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
                 </div>
 
             </div>
 
             <label for="correo">Correo electrónico</label>
-            <input type="email" id="correo" name="correo">
+            <input type="email" id="correo" name="correo"  placeholder="Ingresa tu correo electrónico">
 
             <label for="password">Contraseña</label>
             <input type="password" id="password" name="password">
@@ -43,7 +43,7 @@
 
                 <div>
                     <label for="telefono">Teléfono (opcional)</label>
-                    <input type="tel" id="telefono" name="telefono">
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
                 </div>
             </div>
 
