@@ -1,3 +1,4 @@
+//Carrito
 document.addEventListener('DOMContentLoaded', () => {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     const cartItemCount = document.querySelector('.cart-icon span');
@@ -229,7 +230,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//Menu desplegable del perfil
 let subMenu = document.getElementById("subMenu");
-function toggleMenu(){
+function toggleMenu() {
     subMenu.classList.toggle("open-menu");
+}
+
+//Configuración
+const mostrarDatos = document.querySelector(".mostrarDatos");
+const cambiarDatos = document.querySelector(".cambiarDatos");
+
+const editarBtn = document.querySelector("#editarBtn");
+const confirmarBtn = document.querySelector("#confirmarBtn");
+const cancelarBtn = document.querySelector("#cancelarBtn");
+
+if (editarBtn) {
+    editarBtn.addEventListener("click", () => {
+        mostrarDatos.classList.add("oculto");
+        cambiarDatos.classList.add("mostrar");
+    });
+}
+
+if (confirmarBtn) {
+    confirmarBtn.addEventListener("click", () => {
+        cambiarDatos.classList.remove("mostrar");
+        mostrarDatos.classList.remove("oculto");
+    });
+}
+
+if (cancelarBtn) {
+    cancelarBtn.addEventListener("click", () => {
+        cambiarDatos.classList.remove("mostrar");
+        mostrarDatos.classList.remove("oculto");
+    });
 }

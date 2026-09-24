@@ -41,7 +41,8 @@ a {
     width: 120px;
 }
 
-.btnRojo, .btnBlanco:hover{
+.btnRojo,
+.btnBlanco:hover {
     background-color: var(--rojo);
     color: white;
     border-radius: 5px;
@@ -50,7 +51,8 @@ a {
     border: none;
 }
 
-.btnBlanco, .btnRojo:hover{
+.btnBlanco,
+.btnRojo:hover {
     background-color: white;
     color: var(--rojo);
     border-radius: 5px;
@@ -71,7 +73,7 @@ header {
     background-color: var(--grisOscuro);
 }
 
-header .btnRojo{
+header .btnRojo {
     font-size: 20px;
     margin-right: 10px;
 }
@@ -117,7 +119,7 @@ header>a {
     font-size: 25px;
 }
 
-.usuario{
+.usuario {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -125,16 +127,16 @@ header>a {
     width: 200px;
 }
 
-.usuario:hover{
+.usuario:hover {
     cursor: pointer;
 }
 
-.usuario i{
+.usuario i {
     font-size: 20px;
 }
 
 /*Menu peglable de usuario*/
-.sub-menu-wrap{
+.sub-menu-wrap {
     position: absolute;
     top: 7%;
     right: 5%;
@@ -144,11 +146,11 @@ header>a {
     transition: max-height 0.5s;
 }
 
-.sub-menu-wrap.open-menu{
+.sub-menu-wrap.open-menu {
     max-height: 400px;
 }
 
-.sub-menu{
+.sub-menu {
     background-color: var(--grisOscuro);
     padding: 20PX;
     margin: 10px;
@@ -156,20 +158,20 @@ header>a {
     border-radius: 10px;
 }
 
-.user-info{
+.user-info {
     display: flex;
     align-items: center;
 }
 
-.user-info p{
+.user-info p {
     font-weight: 500;
 }
 
-.user-info i{
+.user-info i {
     font-size: 30px;
 }
 
-.sub-menu hr{
+.sub-menu hr {
     border: 0;
     height: 1px;
     width: 100%;
@@ -177,33 +179,33 @@ header>a {
     margin: 15px 0 10px;
 }
 
-.sub-menu-link{
+.sub-menu-link {
     display: flex;
     align-items: center;
     margin: 12px 0;
     gap: 1em;
 }
 
-.sub-menu-link p{
+.sub-menu-link p {
     width: 100%;
 }
 
-.sub-menu-link i{
+.sub-menu-link i {
     font-size: 20px;
     padding: 5px;
 }
 
-.sub-menu-link span{
+.sub-menu-link span {
     font-size: 22px;
     margin-right: 8px;
     transition: transform 0.5s;
 }
 
-.sub-menu-link:hover span{
+.sub-menu-link:hover span {
     transform: translateX(5px);
 }
 
-.sub-menu-link:hover p{
+.sub-menu-link:hover p {
     font-weight: 600;
 }
 
@@ -263,14 +265,14 @@ footer a:hover {
 }
 
 /*Carrito*/
-.cart-menu{
+.cart-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
 }
 
-.cart-menu h3{
+.cart-menu h3 {
     border-bottom: 1px solid white;
 }
 
@@ -309,7 +311,7 @@ footer a:hover {
     border-bottom-left-radius: 20px;
 }
 
-.sidebar--footer{
+.sidebar--footer {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -358,13 +360,13 @@ footer a:hover {
     font-weight: 500;
 }
 
-.cart-item-info{
+.cart-item-info {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.cart-item-bottom{
+.cart-item-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -446,7 +448,8 @@ form {
     gap: 10px;
 }
 
-input, textarea {
+input,
+textarea {
     border: none;
     background-color: #1f1f1f;
     padding: 20px;
@@ -553,7 +556,8 @@ input, textarea {
     max-width: 1000px;
 }
 
-.tarjetaMenu, .individual-cart-item {
+.tarjetaMenu,
+.individual-cart-item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -570,7 +574,8 @@ input, textarea {
     overflow: hidden;
 }
 
-.tarjetaMenu div, .individual-cart-item>div {
+.tarjetaMenu div,
+.individual-cart-item>div {
     padding: 10px 5px;
     width: 70%;
 }
@@ -589,11 +594,13 @@ input, textarea {
 }
 
 /*-----------PÁGINA CONFIGURACIÓN------------*/
-#mainConfig, #mainOrders{
+#mainConfig,
+#mainOrders {
     padding: 20px;
 }
 
-#mainConfig>div, #mainOrders>div{
+#mainConfig>div,
+#mainOrders>div {
     width: 50%;
     margin: 50px auto;
     display: flex;
@@ -603,25 +610,26 @@ input, textarea {
     border: 1px solid white;
 }
 
-.datos{
+.datos {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.cambiarDatos input{
+.cambiarDatos input {
     margin: 10px;
 }
 
-.cambiarDatos .botones{
+.cambiarDatos .botones {
     display: flex;
     flex-direction: row;
     gap: 1em;
     margin: 10px 0 0 0;
 }
 
-.datos button, .confirmarbtn{
+.datos button,
+.confirmarbtn {
     background-color: var(--rojo);
     display: flex;
     flex-direction: row;
@@ -631,7 +639,7 @@ input, textarea {
     border-radius: 5px;
 }
 
-.cancelarbtn{
+.cancelarbtn {
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -641,24 +649,36 @@ input, textarea {
     border-radius: 5px;
 }
 
-.cancelarbtn p, .cancelarbtn i{
+.cancelarbtn p,
+.cancelarbtn i {
     color: var(--rojo);
 }
 
-.datosSec{
+.datosSec {
     display: flex;
     flex-direction: row;
     margin: 10px 0;
 }
 
-.datosSec>div{
+.datosSec>div {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
+#mainConfig .mostrarDatos,
+#mainConfig .cambiarDatos.mostrar {
+    display: flex;
+}
+
+#mainConfig .cambiarDatos,
+#mainConfig .mostrarDatos.oculto {
+    display: none;
+}
+
+
 /*-----------PÁGINA PEDIDOS------------*/
-#mainOrders>div{
+#mainOrders>div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -668,7 +688,7 @@ input, textarea {
 }
 
 /*-------------PÁGINA SOPORTE---------------*/
-#banner{
+#banner {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -676,19 +696,19 @@ input, textarea {
     padding: 5%;
 }
 
-#ayuda{
+#ayuda {
     display: flex;
     flex-direction: row;
 }
 
-#ayuda section{
+#ayuda section {
     display: flex;
     flex-direction: column;
     padding: 5%;
     gap: 3em;
 }
 
-#ayuda section>div{
+#ayuda section>div {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -697,21 +717,21 @@ input, textarea {
     padding: 20px;
 }
 
-#ayuda section>div>div{
+#ayuda section>div>div {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1em;
 }
 
-#ayuda section>div a{
+#ayuda section>div a {
     padding: 0 auto;
     border-radius: 40px;
     font-weight: 400;
 }
 
 /*-------------PÁGINA SOPORTE CONTACTO---------------*/
-#contactSuportMain{
+#contactSuportMain {
     display: flex;
     flex-direction: row;
     padding: 50px;
