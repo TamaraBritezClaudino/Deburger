@@ -109,7 +109,7 @@
                         $0.00
                     </div>
                 </div>
-                <button class="checkout-btn btnRojo">Confirmar compra</button>
+                <a href="../" class="checkout-btn btnRojo">Confirmar compra</a>
                 <button class="continue-btn btnBlanco">Seguir Comprando</button>
             </div>
         </div>

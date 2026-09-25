@@ -20,7 +20,7 @@
                 </div>
             </a>
 
-            <a href="">
+            <a href="privacyPolicy.php">
                 <i class="bi bi-shield-lock"></i>
                 <div>
                     <h2>Politicas de privacidad</h2>
