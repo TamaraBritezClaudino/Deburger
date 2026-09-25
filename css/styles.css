@@ -931,3 +931,201 @@ textarea{
     gap: 1em;
     cursor: pointer;
 }
+
+/*-----------PÁGINA CONFIRMAR COMPRA------------*/
+
+#mainCompra {
+    padding: 20px;
+}
+
+#mainCompra h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenidoCompra {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.datosCompra {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.resumenCompra {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    order: 2;
+}
+
+.datosCompra {
+    order: 1;
+}
+
+.tituloCompra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.tituloCompra h2 {
+    margin: 0;
+}
+
+.iconoCompra {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--rojo);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconoCompra i {
+    font-size: 1.2em;
+    color: white;
+}
+
+.datosCompra hr,
+.resumenCompra hr {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.filaDatos {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.filaDatos > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.campoCompleto {
+    display: flex;
+    flex-direction: column;
+}
+
+.productoCompra {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.imagenProducto {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+}
+
+.imagenProducto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.infoProducto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoProducto h3 {
+    margin: 0;
+}
+
+.infoProducto p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.infoProducto > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.infoProducto strong {
+    color: var(--naranja);
+}
+
+.totalCompra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalCompra p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.totalCompra strong {
+    color: var(--rojo);
+    font-size: 1.4em;
+}
+
+.btnConfirmarCompra {
+    margin-top: 20px;
+    padding: 12px 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    border: none;
+    border-radius: 7px;
+    background-color: var(--rojo);
+    color: white;
+
+    cursor: pointer;
+}
+
+.btnConfirmarCompra p {
+    margin: 0;
+}
+
+.metodosPago {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.metodosPago label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.metodosPago input {
+    margin: 0;
+}
