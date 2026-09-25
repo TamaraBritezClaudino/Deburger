@@ -693,6 +693,90 @@ textarea {
     padding: 20px;
 }
 
+.historialVacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    font-size: 30px;
+}
+
+.historial {
+    width: 50%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pedido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.pedidoCabecera {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pedidoCabecera h2 {
+    margin: 0;
+}
+
+.pedidoCabecera p {
+    margin: 5px 0 0 0;
+}
+
+.estadoPedido {
+    background-color: var(--naranja);
+    padding: 7px 12px;
+    border-radius: 8px;
+}
+
+.pedido hr {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.productosPedido {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productosPedido>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.productosPedido p {
+    margin: 0;
+}
+
+.totalPedido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalPedido p {
+    margin: 0;
+}
+
+.totalPedido strong {
+    color: var(--rojo);
+    font-size: 1.2em;
+}
+
 /*-------------PÁGINA SOPORTE---------------*/
 #banner {
     text-align: center;
