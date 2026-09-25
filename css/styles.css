@@ -536,7 +536,7 @@ textarea {
 }
 
 /*-----------PÁGINA HACE TU PEDIDO------------*/
-#menuMain> section>img{
+#menuMain>section>img {
     margin-bottom: 20px;
 }
 
@@ -693,7 +693,7 @@ textarea {
     padding: 20px;
 }
 
-.historialVacio{
+.historialVacio {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -788,7 +788,7 @@ textarea {
     background-size: contain;
 }
 
-#banner h1{
+#banner h1 {
     font-size: 50px;
 }
 
@@ -826,7 +826,7 @@ textarea {
     font-weight: 400;
 }
 
-#tarjetasSoporte a{
+#tarjetasSoporte a {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -838,21 +838,21 @@ textarea {
     transition: transform 0.5s;
 }
 
-#tarjetasSoporte a:hover{
+#tarjetasSoporte a:hover {
     transform: translateY(-10px);
 }
 
-#tarjetasSoporte a div{
+#tarjetasSoporte a div {
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 
-#tarjetasSoporte h2{
+#tarjetasSoporte h2 {
     color: var(--amarilloClaro);
 }
 
-#tarjetasSoporte i{
+#tarjetasSoporte i {
     font-size: 50px;
     border-radius: 50%;
     padding: 10px;
@@ -867,7 +867,7 @@ textarea {
     gap: 1em;
 }
 
-#contactSuportMain .soporte{
+#contactSuportMain .soporte {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -877,46 +877,46 @@ textarea {
     background-color: #222;
 }
 
-.soporte i{
+.soporte i {
     background-color: var(--rojo);
     font-size: 15px;
     padding: 10px;
     border-radius: 50%;
 }
 
-.soporte .titulo i{
+.soporte .titulo i {
     font-size: 25px;
     color: var(--rojo);
     background-color: white;
 }
 
-#contactSuportMain .soporte>div{
+#contactSuportMain .soporte>div {
     display: flex;
     flex-direction: row;
     gap: 1em;
     align-items: center;
 }
 
-#contactSuportMain .titulo{
+#contactSuportMain .titulo {
     display: flex;
-    
+
 }
 
-#contactSuportMain section{
+#contactSuportMain section {
     width: 40%;
 }
 
-#contactSuportMain .form{
+#contactSuportMain .form {
     width: 60%;
     align-items: center;
     padding: 30px;
 }
 
-#contactSupportMain .form form{
+#contactSupportMain .form form {
     width: 90%;
 }
 
-textarea{
+textarea {
     min-height: 300px;
     max-height: 300px;
     max-width: 100%;
@@ -1016,7 +1016,7 @@ textarea{
     gap: 15px;
 }
 
-.filaDatos > div {
+.filaDatos>div {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -1062,7 +1062,7 @@ textarea{
     font-size: 0.9em;
 }
 
-.infoProducto > div {
+.infoProducto>div {
     display: flex;
     justify-content: space-between;
     margin-top: auto;
@@ -1128,4 +1128,102 @@ textarea{
 
 .metodosPago input {
     margin: 0;
+}
+
+/*-----------PÁGINA POLÍTICA DE PRIVACIDAD------------*/
+#mainPrivacidad {
+    padding: 20px;
+}
+
+#mainPrivacidad>h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#mainPrivacidad>p {
+    width: 70%;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+.contenidoPrivacidad {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 70%;
+    margin: 40px auto;
+    align-items: flex-start;
+}
+
+.contenidoPrivacidad>div:first-child {
+    width: 30%;
+    position: sticky;
+    top: 20px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.contenidoPrivacidad>div:last-child {
+    width: 70%;
+    padding: 25px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.contenidoPrivacidad h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.contenidoPrivacidad h2:first-child {
+    margin-top: 0;
+}
+
+.contenidoPrivacidad p {
+    margin: 10px 0;
+}
+
+.contenidoPrivacidad ul,
+.contenidoPrivacidad ol {
+    padding-left: 25px;
+    line-height: 1.8;
+}
+
+.contenidoPrivacidad li {
+    margin: 5px 0;
+}
+
+.contactoPrivacidad {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contactoPrivacidad>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.contactoPrivacidad i {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--rojo);
+}
+
+.contactoPrivacidad p {
+    margin: 0;
+}
+
+.actualizacionPrivacidad {
+    margin-top: 30px;
+    font-size: 0.9em;
+    opacity: 0.7;
 }

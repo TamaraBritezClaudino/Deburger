@@ -12,7 +12,7 @@
 
     <section id="ayuda">
         <section id="tarjetasSoporte">
-            <a href="">
+            <a href="#">
                 <i class="bi bi-question-circle"></i>
                 <div>
                     <h2>Preguntas frecuentes</h2>
@@ -28,7 +28,7 @@
                 </div>
             </a>
 
-            <a href="">
+            <a href="#">
                 <i class="bi bi-journal-text"></i>
                 <div>
                     <h2>Terminos de uso</h2>
