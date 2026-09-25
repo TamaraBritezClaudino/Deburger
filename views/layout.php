@@ -125,8 +125,8 @@
     <footer>
         <p>© 2026 Deburger</p>
         <div>
-            <a href="">Terminos de uso</a>
-            <a href="">Politicas de privacidad</a>
+            <a href="#">Terminos de uso</a>
+            <a href="privacyPolicy.php">Politicas de privacidad</a>
         </div>
     </footer>
 </body>
