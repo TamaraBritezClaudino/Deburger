@@ -536,6 +536,10 @@ textarea {
 }
 
 /*-----------PÁGINA HACE TU PEDIDO------------*/
+#menuMain> section>img{
+    margin-bottom: 20px;
+}
+
 #menu {
     display: flex;
     flex-direction: column;
@@ -700,6 +704,10 @@ textarea {
     background-size: contain;
 }
 
+#banner h1{
+    font-size: 50px;
+}
+
 #ayuda {
     display: flex;
     flex-direction: row;
@@ -831,9 +839,11 @@ textarea{
     min-width: 100%;
 }
 
-.btnEnviar{
+.btnEnviar {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
-    padding: auto;
+    cursor: pointer;
 }

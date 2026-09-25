@@ -4,10 +4,9 @@
     <title>Hacé tu pedido</title>
 </head>
 
-<main>
-
+<main id="menuMain">
     <section id="carrusel">
-        <img src="img/img_inicio.png" alt="img_inicio">
+        <img src="img/Banner2.png" alt="img_inicio">
     </section>
 
     <section id="menu">
