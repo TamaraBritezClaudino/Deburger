@@ -28,18 +28,20 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `intento_fallido` (IN `correo` VARCHAR(255))   BEGIN
 
     UPDATE clientes
-    SET intentos_fallidos = intentos_fallidos + 1
-    WHERE email = correo
-      AND bloqueado = FALSE;
+    SET intentos_fallidos = intentos_fallidos + 1 WHERE email = correo  AND bloqueado = FALSE;
 
     UPDATE clientes
-    SET bloqueado = TRUE
-    WHERE email = correo
-      AND intentos_fallidos >= 3;
+    SET bloqueado = TRUE  WHERE email = correo AND intentos_fallidos >= 3;
 
 END$$
 
 DELIMITER ;
+/*
+Con este codigo quitamos el bloqueo
+
+UPDATE clientes
+SET intentos_fallidos = 0
+WHERE email = 'ana@ana';*/
 
 -- --------------------------------------------------------
 
