@@ -5,10 +5,13 @@
 </head>
 
 <main id="contactSuportMain">
-    <section>
-        <i class="bi bi-envelope"></i>
-        <h1>Soporte</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, dui fringilla metus maecenas erat sem malesuada, vestibulum id sociosqu vulputate eros scelerisque eget. Eget mattis odio fames ullamcorper mollis tristique himenaeos metus, inceptos convallis phasellus malesuada turpis pellentesque mauris litora aliquam, volutpat per platea arcu ligula sed vestibulum.</p>
+    <section class="soporte">
+        <div class="titulo">
+            <i class="bi bi-envelope"></i>
+            <h1>Soporte</h1>
+        </div>
+
+        <p>¿No puedes encontrar lo que estas buscando? ¡No te preocupes! Ponte en contacto con el equipo de soporte, nos complace ayudar.</p>
         <hr>
         <div>
             <i class="bi bi-envelope"></i>
@@ -21,16 +24,9 @@
     </section>
 
     <section class="form">
-        <div>
-            <h2>Realizar un reclamo</h2>
-            <p>Si tu pedido fue online y tenes algun inconveniente, completa el siguiente formulario</p>
-        </div>
-
         <form method="post">
-            <div>
-                <label for="nombre">Nombre y apellido</label>
-                <input type="text" id="nombre" name="nombre">
-            </div>
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre">
 
             <div>
                 <div>
@@ -44,16 +40,15 @@
                 </div>
             </div>
 
-            <div>
-                <label for="reclamo">Detalle de tu reclamo</label>
-                <textarea name="reclamo" id="reclamo"></textarea>
-            </div>
 
-            <button type="submit" name="submit">
+            <label for="reclamo">Detalle de tu reclamo</label>
+            <textarea name="reclamo" id="reclamo"></textarea>
+
+
+            <button type="submit" name="submit" class="btnEnviar">
                 <p>Enviar</p>
                 <i class="bi bi-arrow-right"></i>
             </button>
-
         </form>
     </section>
 </main>

@@ -16,7 +16,7 @@
                 <i class="bi bi-question-circle"></i>
                 <div>
                     <h2>Preguntas frecuentes</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, dui fringilla metus maecenas erat sem malesuada, vestibulum id sociosqu vulputate eros scelerisque eget. Eget mattis odio fames ullamcorper mollis tristique himenaeos metus, inceptos convallis phasellus malesuada turpis pellentesque mauris litora aliquam, volutpat per platea arcu ligula sed vestibulum. </p>
+                    <p>Encontrá respuestas a las preguntas más comunes sobre nuestros productos, pedidos, medios de pago, envíos y otros temas relacionados con el servicio de Deburger. </p>
                 </div>
             </a>
 
@@ -24,7 +24,7 @@
                 <i class="bi bi-shield-lock"></i>
                 <div>
                     <h2>Politicas de privacidad</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, dui fringilla metus maecenas erat sem malesuada, vestibulum id sociosqu vulputate eros scelerisque eget. Eget mattis odio fames ullamcorper mollis tristique himenaeos metus, inceptos convallis phasellus malesuada turpis pellentesque mauris litora aliquam, volutpat per platea arcu ligula sed vestibulum. </p>
+                    <p>Conocé cómo recopilamos, utilizamos y protegemos tus datos personales, además de cómo manejamos la información que proporcionás al utilizar nuestro sitio web.</p>
                 </div>
             </a>
 
@@ -32,7 +32,7 @@
                 <i class="bi bi-journal-text"></i>
                 <div>
                     <h2>Terminos de uso</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, dui fringilla metus maecenas erat sem malesuada, vestibulum id sociosqu vulputate eros scelerisque eget. Eget mattis odio fames ullamcorper mollis tristique himenaeos metus, inceptos convallis phasellus malesuada turpis pellentesque mauris litora aliquam, volutpat per platea arcu ligula sed vestibulum. </p>
+                    <p>Consultá las condiciones y normas que se aplican al utilizar el sitio de Deburger, realizar pedidos, utilizar sus funciones y acceder a nuestros servicios.</p>
                 </div>
             </a>
         </section>
@@ -40,7 +40,7 @@
         <section>
             <div class="ayuda">
                 <h3>¿Necesitas más ayuda?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, dui fringilla metus maecenas erat sem malesuada, vestibulum id sociosqu vulputate eros scelerisque eget.</p>
+                <p>¿No puede encontrar lo que busca? ¡Póngase en contacto con nosotros hoy mismo!</p>
                 <a href="contactSupport.php" class="btnRojo">Contactar con soporte</a>
                 <hr>
                 <h4>Detalle de contacto</h4>

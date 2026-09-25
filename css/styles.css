@@ -49,6 +49,7 @@ a {
     cursor: pointer;
     padding: 10px;
     border: none;
+    transition: 0.5s;
 }
 
 .btnBlanco,
@@ -59,6 +60,7 @@ a {
     cursor: pointer;
     padding: 10px;
     border: none;
+    transition: 0.5s;
 }
 
 /*-----------------HEADER-------------------*/
@@ -223,7 +225,7 @@ header>a {
     padding: 10px;
     border-radius: 20px;
     font-weight: bold;
-    transition: 0.3s ease;
+    transition: 0.5s;
 }
 
 .cart-icon i:hover {
@@ -694,6 +696,8 @@ textarea {
     flex-direction: column;
     gap: 1em;
     padding: 5%;
+    background-image: url("../img/Banner.png");
+    background-size: contain;
 }
 
 #ayuda {
@@ -730,9 +734,106 @@ textarea {
     font-weight: 400;
 }
 
+#tarjetasSoporte a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: white solid 1px;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 1em;
+    transition: transform 0.5s;
+}
+
+#tarjetasSoporte a:hover{
+    transform: translateY(-10px);
+}
+
+#tarjetasSoporte a div{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#tarjetasSoporte h2{
+    color: var(--amarilloClaro);
+}
+
+#tarjetasSoporte i{
+    font-size: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--rojo);
+}
+
 /*-------------PÁGINA SOPORTE CONTACTO---------------*/
 #contactSuportMain {
     display: flex;
     flex-direction: row;
     padding: 50px;
+    gap: 1em;
+}
+
+#contactSuportMain .soporte{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #222;
+}
+
+.soporte i{
+    background-color: var(--rojo);
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.soporte .titulo i{
+    font-size: 25px;
+    color: var(--rojo);
+    background-color: white;
+}
+
+#contactSuportMain .soporte>div{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+#contactSuportMain .titulo{
+    display: flex;
+    
+}
+
+#contactSuportMain section{
+    width: 40%;
+}
+
+#contactSuportMain .form{
+    width: 60%;
+    align-items: center;
+    padding: 30px;
+}
+
+#contactSupportMain .form form{
+    width: 90%;
+}
+
+textarea{
+    min-height: 300px;
+    max-height: 300px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.btnEnviar{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    padding: auto;
 }
