@@ -10,7 +10,6 @@
 
     <form action="" method="POST" class="contenidoCompra">
 
-        <!-- DATOS DEL CLIENTE -->
         <section class="datosCompra">
 
             <div class="tituloCompra">
@@ -83,85 +82,66 @@
                 <div class="metodosPago">
 
                     <label>
-                        <input type="radio" name="metodoPago" value="efectivo">
+                        <input
+                            type="radio"
+                            name="metodoPago"
+                            value="efectivo">
                         <span>Efectivo</span>
                     </label>
 
                     <label>
-                        <input type="radio" name="metodoPago" value="tarjeta">
+                        <input
+                            type="radio"
+                            name="metodoPago"
+                            value="tarjeta">
                         <span>Tarjeta de crédito/débito</span>
                     </label>
 
                     <label>
-                        <input type="radio" name="metodoPago" value="mercadoPago">
+                        <input
+                            type="radio"
+                            name="metodoPago"
+                            value="mercadoPago">
                         <span>Mercado Pago</span>
                     </label>
 
                 </div>
             </div>
 
-            <button type="submit" name="confirmar" class="btnConfirmarCompra">
+            <button
+                type="submit"
+                name="confirmar"
+                class="btnConfirmarCompra">
+
                 <p>Confirmar pedido</p>
                 <i class="bi bi-check-lg"></i>
+
             </button>
 
         </section>
 
 
-        <!-- RESUMEN DEL PEDIDO -->
         <section class="resumenCompra">
 
             <div class="tituloCompra">
+
                 <div class="iconoCompra">
                     <i class="bi bi-bag"></i>
                 </div>
 
                 <h2>Tu pedido</h2>
+
             </div>
 
             <hr>
 
-            <div class="productoCompra">
-
-                <div class="imagenProducto">
-                    <img src="img/hamburguesa.jpg" alt="Hamburguesa clásica">
-                </div>
-
-                <div class="infoProducto">
-                    <h3>Hamburguesa clásica</h3>
-                    <p>Hamburguesa con queso, lechuga y tomate</p>
-
-                    <div>
-                        <span>Cantidad: 2</span>
-                        <strong>$18.000</strong>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="productoCompra">
-
-                <div class="imagenProducto">
-                    <img src="img/papas.jpg" alt="Papas fritas">
-                </div>
-
-                <div class="infoProducto">
-                    <h3>Papas fritas</h3>
-                    <p>Papas fritas clásicas</p>
-
-                    <div>
-                        <span>Cantidad: 1</span>
-                        <strong>$4.500</strong>
-                    </div>
-                </div>
-
-            </div>
+            <div id="productosCompra"></div>
 
             <hr>
 
             <div class="totalCompra">
                 <p>Total</p>
-                <strong>$22.500</strong>
+                <strong id="totalCompra">$0</strong>
             </div>
 
         </section>
