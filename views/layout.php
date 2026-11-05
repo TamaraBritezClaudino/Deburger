@@ -10,6 +10,16 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <link rel="icon" type="image/png" href="img/deburger_icon.png">
+
+    <?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    ?>
+    <script>
+        // Lo usa js/script.js para saber si hay una sesión iniciada
+        window.USUARIO_LOGUEADO = <?php echo isset($_SESSION['usuario']) ? 'true' : 'false'; ?>;
+    </script>
 </head>
 
 
@@ -78,12 +88,15 @@
         }
         ?>
 
+        <?php if (isset($_SESSION['usuario'])) { ?>
         <div class="cart-icon">
             <i class="bi bi-cart"></i>
             <span>0</span> <!--Cantidad de productos pedidos-->
         </div>
+        <?php } ?>
     </header>
 
+    <?php if (isset($_SESSION['usuario'])) { ?>
     <!--Carrito-->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-close">
@@ -116,6 +129,7 @@
             </div>
         </div>
     </div>
+    <?php } ?>
 
     <?php
     $section = (isset($section)) ? $section : 'home';

@@ -40,7 +40,14 @@
       mysqli_query($conn, $sqlReset);
 
       $_SESSION['usuario'] = $cliente;
-      header("Location: index.php");
+
+      // Volver a la página desde donde lo mandaron (solo páginas locales conocidas)
+      $permitidas = ['takeAway.php', 'checkout.php', 'index.php'];
+      $volver = $_POST['volver'] ?? '';
+      if (!in_array($volver, $permitidas, true)) {
+        $volver = 'index.php';
+      }
+      header("Location: " . $volver);
       exit();
     }
   }

@@ -10,46 +10,27 @@
     </section>
 
     <section id="menu">
+        <?php
+        foreach ($menu as $categoria => $productos) { ?>
         <section class="menuSeccion">
-            <h2>Nombre sección</h2>
+            <h2><?php echo htmlspecialchars(ucfirst($categoria)); ?></h2>
 
             <section class="tarjetasMenu">
+                <?php foreach ($productos as $prod) { ?>
                 <div class="card tarjetaMenu">
                     <img src="" alt="">
                     <div>
-                        <h3 class="card-title">Nombre producto 1</h3>
-                        <p>Lorem impsum dolor sin amet bla bla bla bla bla</p>
+                        <h3 class="card-title"><?php echo htmlspecialchars($prod['nombre']); ?></h3>
+                        <p class="card-description"><?php echo htmlspecialchars($prod['descripcion']); ?></p>
                         <div>
-                            <p class="price">$30000</p>
+                            <p class="price">$<?php echo number_format($prod['precio'], 0, ',', '.'); ?></p>
                             <i class="bi bi-cart-plus add-to-cart"></i>
                         </div>
                     </div>
                 </div>
-
-                <div class="card tarjetaMenu">
-                    <img src="" alt="">
-                    <div>
-                        <h3 class="card-title">Nombre producto 2</h3>
-                        <p>Lorem impsum dolor sin amet bla bla bla bla bla</p>
-                        <div>
-                            <p class="price">$30000</p>
-                            <i class="bi bi-cart-plus add-to-cart"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card tarjetaMenu">
-                    <img src="" alt="">
-                    <div>
-                        <h3 class="card-title">Nombre producto 3</h3>
-                        <p>Lorem impsum dolor sin amet bla bla bla bla bla</p>
-                        <div>
-                            <p class="price">$30000</p>
-                            <i class="bi bi-cart-plus add-to-cart"></i>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </section>
         </section>
+        <?php } ?>
     </section>
 </main>

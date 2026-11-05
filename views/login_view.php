@@ -23,6 +23,8 @@
             </div>
 
             <form method="post">
+                <input type="hidden" name="volver" value="<?php echo htmlspecialchars($_GET['volver'] ?? ($_POST['volver'] ?? '')); ?>">
+
                 <label for="correo">Correo electrónico</label>
                 <input type="email" id="correo" name="correo"  placeholder="Ingresa tu correo electrónico">
 

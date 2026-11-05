@@ -38,6 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.continue-btn');
 
 
+    // Sin sesión iniciada no se conserva ningún carrito
+    if (!window.USUARIO_LOGUEADO) {
+        localStorage.removeItem('cartItems');
+    }
+
+
     // Cargar carrito guardado
     let cartItems =
         JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -55,6 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     addToCartButtons.forEach((button, index) => {
 
         button.addEventListener('click', () => {
+
+            // Sin cuenta iniciada: mandar a iniciar sesión
+            if (!window.USUARIO_LOGUEADO) {
+                window.location.href =
+                    'login.php?volver=takeAway.php';
+                return;
+            }
 
             const cards =
                 document.querySelectorAll('.card');
