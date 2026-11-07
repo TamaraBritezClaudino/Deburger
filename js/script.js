@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             const item = {
+                id: card.dataset.id,
                 name: itemName,
                 price: itemPrice,
                 image: itemImage,
@@ -530,6 +531,21 @@ if (productosCompra) {
 
     totalCompra.textContent =
         `$${formatPrice(total)}`;
+
+
+    // Mandar el carrito al servidor al confirmar el pedido
+    const carritoInput =
+        document.getElementById('carritoInput');
+
+    if (carritoInput) {
+        carritoInput.value = JSON.stringify(
+            cartItems.map(item => ({
+                id: item.id,
+                name: item.name,
+                quantity: item.quantity
+            }))
+        );
+    }
 
 }
 

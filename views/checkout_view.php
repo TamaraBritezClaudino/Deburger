@@ -10,6 +10,8 @@
 
     <form action="" method="POST" class="contenidoCompra">
 
+        <input type="hidden" name="carrito" id="carritoInput">
+
         <section class="datosCompra">
 
             <div class="tituloCompra">
@@ -85,7 +87,7 @@
                         <input
                             type="radio"
                             name="metodoPago"
-                            value="efectivo">
+                            value="efectivo" required>
                         <span>Efectivo</span>
                     </label>
 
@@ -97,16 +99,12 @@
                         <span>Tarjeta de crédito/débito</span>
                     </label>
 
-                    <label>
-                        <input
-                            type="radio"
-                            name="metodoPago"
-                            value="mercadoPago">
-                        <span>Mercado Pago</span>
-                    </label>
-
                 </div>
             </div>
+
+            <?php if (!empty($error)) { ?>
+                <p><?php echo htmlspecialchars($error); ?></p>
+            <?php } ?>
 
             <button
                 type="submit"

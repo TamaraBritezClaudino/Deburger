@@ -17,7 +17,7 @@
 
             <section class="tarjetasMenu">
                 <?php foreach ($productos as $prod) { ?>
-                <div class="card tarjetaMenu">
+                <div class="card tarjetaMenu" data-id="<?php echo (int) $prod['id_producto']; ?>">
                     <img src="" alt="">
                     <div>
                         <h3 class="card-title"><?php echo htmlspecialchars($prod['nombre']); ?></h3>
