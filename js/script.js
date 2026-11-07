@@ -596,13 +596,7 @@ if (editarBtn) {
 }
 
 
-if (confirmarBtn) {
-    confirmarBtn.addEventListener("click", () => {
-        cambiarDatos.classList.remove("mostrar");
-        mostrarDatos.classList.remove("oculto");
-    });
-
-}
+// Confirmar envía el formulario (config.php) y la página se recarga mostrando los datos guardados
 
 
 if (cancelarBtn) {

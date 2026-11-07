@@ -21,13 +21,13 @@
             <div>
                 <p>Nombre:</p>
                 <p>
-                    <?php echo $_SESSION['usuario']['nombre'] ?>
+                    <?php echo htmlspecialchars($_SESSION['usuario']['nombre'] ?? '') ?>
                 </p>
             </div>
             <div>
                 <p>Apellido:</p>
                 <p>
-                    <?php echo $_SESSION['usuario']['apellido'] ?>
+                    <?php echo htmlspecialchars($_SESSION['usuario']['apellido'] ?? '') ?>
                 </p>
             </div>
         </div>
@@ -36,22 +36,24 @@
             <div>
                 <p>Email:</p>
                 <p>
-                    <?php echo $_SESSION['usuario']['email'] ?>
+                    <?php echo htmlspecialchars($_SESSION['usuario']['email'] ?? '') ?>
                 </p>
             </div>
             <div>
                 <p>Teléfono:</p>
                 <p>
-                    <?php echo $_SESSION['usuario']['telefono'] ?>
+                    <?php echo htmlspecialchars($_SESSION['usuario']['telefono'] ?? '') ?>
                 </p>
             </div>
         </div>
 
         <p>Direccion:</p>
-        <p>Direccion generica 1234</p>
+        <p><?php echo htmlspecialchars($_SESSION['usuario']['direccion'] ?? '') ?></p>
     </div>
 
     <div class="cambiarDatos">
+        <form id="formPerfil" method="POST" action="config.php"></form>
+
         <div class="datos">
             <h2>Datos personales</h2>
         </div>
@@ -60,32 +62,32 @@
         <div class="datosSec">
             <div>
                 <label for="name">Nombre:</label>
-                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" value="<?php echo $_SESSION['usuario']['nombre'] ?>">
+                <input type="text" form="formPerfil" name="nombre" id="name" placeholder="Ingresa tu nombre" required value="<?php echo htmlspecialchars($_SESSION['usuario']['nombre'] ?? '') ?>">
             </div>
 
             <div>
                 <label for="lastname">Apellido:</label>
-                <input type="text" name="lastname" id="lastname" placeholder="Ingresa tu nombre" value="<?php echo $_SESSION['usuario']['apellido'] ?>">
+                <input type="text" form="formPerfil" name="apellido" id="lastname" placeholder="Ingresa tu nombre" required value="<?php echo htmlspecialchars($_SESSION['usuario']['apellido'] ?? '') ?>">
             </div>
         </div>
 
         <div class="datosSec">
             <div>
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Ingresa tu correo electronico" value="<?php echo $_SESSION['usuario']['email'] ?>">
+                <input type="email" form="formPerfil" name="email" id="email" placeholder="Ingresa tu correo electronico" required value="<?php echo htmlspecialchars($_SESSION['usuario']['email'] ?? '') ?>">
             </div>
 
             <div>
                 <label>Teléfono:</label>
-                <input type="tel" name="" id="" placeholder="Ingresa tu número de teléfono" value="<?php echo $_SESSION['usuario']['telefono'] ?>">
+                <input type="tel" form="formPerfil" name="telefono" id="" placeholder="Ingresa tu número de teléfono" value="<?php echo htmlspecialchars($_SESSION['usuario']['telefono'] ?? '') ?>">
             </div>
         </div>
 
         <label>Direccion:</label>
-        <input type="text" name="" id="" value="<?php echo $_SESSION['usuario']['telefono'] ?>">
+        <input type="text" form="formPerfil" name="direccion" id="" value="<?php echo htmlspecialchars($_SESSION['usuario']['direccion'] ?? '') ?>">
 
         <div class="botones">
-            <button class="confirmarbtn" id="confirmarBtn">
+            <button class="confirmarbtn" id="confirmarBtn" type="submit" form="formPerfil" name="guardarPerfil">
                 <i class="bi bi-check-lg"></i>
                 <p>Confirmar</p>
             </button>
