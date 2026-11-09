@@ -5,7 +5,7 @@
 </head>
 
 <main id="mainSoporte">
-    <section id="banner">
+    <section id="bannerSoporte">
         <h1>Soporte</h1>
         <p>¡Bienvenido!<br>¿En qué podemos ayudarte?</p>
     </section>

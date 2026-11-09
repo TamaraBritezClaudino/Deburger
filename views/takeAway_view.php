@@ -5,8 +5,7 @@
 </head>
 
 <main id="menuMain">
-    <section id="carrusel">
-        <img src="img/Banner2.png" alt="img_inicio">
+    <section id="Banner">
     </section>
 
     <section id="menu">

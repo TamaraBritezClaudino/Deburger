@@ -10,7 +10,7 @@
     <div class="mostrarDatos">
         <div class="datos">
             <h2>Datos personales</h2>
-            <button id="editarBtn">
+            <button class="btnRojo">
                 <i class="bi bi-pen"></i>
                 <p>Editar</p>
             </button>
@@ -87,7 +87,7 @@
         <input type="text" form="formPerfil" name="direccion" id="" value="<?php echo htmlspecialchars($_SESSION['usuario']['direccion'] ?? '') ?>">
 
         <div class="botones">
-            <button class="confirmarbtn" id="confirmarBtn" type="submit" form="formPerfil" name="guardarPerfil">
+            <button class="btnRojo" id="confirmarBtn" type="submit" form="formPerfil" name="guardarPerfil">
                 <i class="bi bi-check-lg"></i>
                 <p>Confirmar</p>
             </button>
