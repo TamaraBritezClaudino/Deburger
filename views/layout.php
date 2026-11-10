@@ -3,19 +3,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="css/styles.css" rel="stylesheet">
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        defer>
+    </script>
 
     <script src="js/script.js" defer></script>
 
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="icon" type="image/png" href="img/deburger_icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <?php
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
     ?>
+
     <script>
         // Lo usa js/script.js para saber si hay una sesión iniciada
         window.USUARIO_LOGUEADO = <?php echo isset($_SESSION['usuario']) ? 'true' : 'false'; ?>;
@@ -89,46 +93,46 @@
         ?>
 
         <?php if (isset($_SESSION['usuario'])) { ?>
-        <div class="cart-icon">
-            <i class="bi bi-cart"></i>
-            <span>0</span> <!--Cantidad de productos pedidos-->
-        </div>
+            <div class="cart-icon">
+                <i class="bi bi-cart"></i>
+                <span>0</span> <!--Cantidad de productos pedidos-->
+            </div>
         <?php } ?>
     </header>
 
     <?php if (isset($_SESSION['usuario'])) { ?>
-    <!--Carrito-->
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-close">
-            <i class="bi bi-x-lg"></i>
-        </div>
-
-        <div class="cart-menu">
-            <div>
-                <h3>
-                    <i class="bi bi-bag"></i>
-                    Mi Pedido
-                    <span class="cart-number">0</span>
-                </h3>
-
-                <div class="cart-items">
-                    <!-- JavaScript agrega los productos acá -->
-                </div>
+        <!--Carrito-->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-close">
+                <i class="bi bi-x-lg"></i>
             </div>
 
-            <div class="sidebar--footer">
-                <div class="total--amount">
-                    <h5>Total del Carrito</h5>
+            <div class="cart-menu">
+                <div>
+                    <h3>
+                        <i class="bi bi-bag"></i>
+                        Mi Pedido
+                        <span class="cart-number">0</span>
+                    </h3>
 
-                    <div class="cart-total">
-                        $0.00
+                    <div class="cart-items">
+                        <!-- JavaScript agrega los productos acá -->
                     </div>
                 </div>
-                <a href="checkout.php" class="checkout-btn btnRojo">Confirmar compra</a>
-                <button class="continue-btn btnBlanco">Seguir Comprando</button>
+
+                <div class="sidebar--footer">
+                    <div class="total--amount">
+                        <h5>Total del Carrito</h5>
+
+                        <div class="cart-total">
+                            $0.00
+                        </div>
+                    </div>
+                    <a href="checkout.php" class="checkout-btn btnRojo">Confirmar compra</a>
+                    <button class="continue-btn btnBlanco">Seguir Comprando</button>
+                </div>
             </div>
         </div>
-    </div>
     <?php } ?>
 
     <?php

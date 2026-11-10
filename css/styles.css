@@ -85,7 +85,7 @@ a {
   transition: 0.5s;
 }
 
-/*-----------------HEADER-------------------*/
+/*-------------------------------------------------HEADER---------------------------------------------*/
 header {
   width: 100%;
   height: 90px;
@@ -255,7 +255,7 @@ header>a {
   color: var(--rojo);
 }
 
-/*-----------FOOTER------------*/
+/*------------------------------------FOOTER------------------------------------*/
 
 footer {
   border-top: 1px solid #222;
@@ -396,7 +396,7 @@ footer a:hover {
   justify-content: space-between;
 }
 
-/*-------------PÁGINA INICIO------------------*/
+/*--------------------------------------------PÁGINA INICIO-----------------------------------------------*/
 #Banner {
   min-height: 650px;
   width: 100%;
@@ -623,7 +623,7 @@ footer a:hover {
   margin: 0;
 }
 
-/*----------------PÁGINA REGISTRO E INICIO DE SESIÓN-----------------*/
+/*----------------------------------------------PÁGINA REGISTRO E INICIO DE SESIÓN-----------------------------------*/
 .imgRegistro,
 .imgLogin {
   height: 100%;
@@ -692,88 +692,269 @@ textarea {
   color: var(--rojo);
 }
 
-/*-------------PÁGINA LOCALES---------------*/
+/*---------------------------------------------------------PÁGINA LOCALES-------------------------------------------------------*/
 #mainLocales {
+  width: 100%;
+  min-height: 750px;
+  box-sizing: border-box;
+  padding: 55px 7%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 50px;
-  gap: 2em;
+  gap: 35px;
+}
+
+.encabezadoLocales {
+  text-align: center;
+}
+
+.encabezadoLocales h1 {
+  color: white;
+  font-size: 36px;
+  margin: 0;
+}
+
+.encabezadoLocales h1 strong {
+  color: var(--rojo);
+}
+
+.encabezadoLocales p {
+  color: #bdbdbd;
+  margin-top: 8px;
+}
+
+.contenidoLocales {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 30px;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.panelLocales {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .buscar {
-  background-color: white;
-  border-radius: 15px;
-  width: 700px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 0 1rem;
+  gap: 12px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 0 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .buscar i {
-  color: black;
-}
-
-.buscar form {
-  flex: 1;
+  color: #555;
+  font-size: 18px;
 }
 
 .buscar input {
+  width: 100%;
+  padding: 15px 0;
   background: transparent;
-  padding: 15px;
+  border: none;
   outline: none;
   color: black;
-  width: 100%;
-  border: none;
+  font-size: 14px;
+}
+
+.cantidadLocales {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cantidadLocales h2 {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+
+.cantidadLocales span {
+  color: var(--amarillo);
+  font-size: 13px;
 }
 
 #locales {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 14px;
 }
 
 .tarjetaLocal {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
 
-  width: 700px;
-  background-color: #292929;
-  border: 1px rgba(255, 255, 255, 0.459) solid;
+  background-color: #1c1c1c;
+  border: 1px solid #393939;
   border-radius: 10px;
-  padding: 5px;
+
+  padding: 18px;
+  width: 100%;
+  box-sizing: border-box;
+
+  transition: 0.25s;
 }
 
-.tarjetaLocal .numLugar,
-.tarjetaLocal .direccion,
-.tarjetaLocal .horario {
+.tarjetaLocal:hover,
+.tarjetaLocal.seleccionado {
+  border-color: var(--rojo);
+  background-color: #25201f;
+}
+
+.numeroLocal {
+  background-color: var(--rojo);
+  color: white;
+
+  min-width: 40px;
+  height: 40px;
+
   display: flex;
-  flex-direction: row;
-  gap: 1em;
   align-items: center;
   justify-content: center;
+
+  border-radius: 7px;
+  font-weight: bold;
 }
 
-/*-----------PÁGINA HACE TU PEDIDO------------*/
+.infoLocal {
+  flex: 1;
+  min-width: 0;
+}
+
+.infoLocal h3 {
+  color: white;
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+
+.infoLocal p {
+  color: #bdbdbd;
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+.infoLocal p i {
+  color: var(--rojo);
+  margin-right: 6px;
+}
+
+.estadoLocal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #d0d0d0;
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+.estadoLocal span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--amarillo);
+}
+
+.verLocal {
+  background-color: var(--rojo);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: 0.2s;
+  flex-shrink: 0;
+}
+
+.verLocal:hover {
+  background-color: var(--amarillo);
+  color: black;
+}
+
+#sinResultados {
+  display: none;
+  color: #aaa;
+  text-align: center;
+  padding: 25px;
+}
+
+.contenedorMapa {
+  background-color: #1c1c1c;
+  border: 1px solid #393939;
+  border-radius: 12px;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.tituloMapa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5px 15px;
+}
+
+.tituloMapa h2 {
+  color: white;
+  font-size: 19px;
+  margin: 0;
+}
+
+.tituloMapa p {
+  color: #aaa;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
+.tituloMapa>i {
+  color: var(--rojo);
+  font-size: 27px;
+}
+
+#mapaLocales {
+  width: 100%;
+  height: 480px;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.pieMapa {
+  color: #aaa;
+  font-size: 12px;
+  padding: 13px 5px 3px;
+}
+
+.pieMapa i {
+  color: var(--amarillo);
+  margin-right: 5px;
+}
+
+/*-------------------------------------PÁGINA HACE TU PEDIDO----------------------------------------------*/
 #menuMain {
   width: 100%;
 }
 
-#menuMain #Banner{
+#menuMain #Banner {
   background-image: url("../img/BannerMenu.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#menuMain #textoyboton h1{
+#menuMain #textoyboton h1 {
   font-weight: 800;
   color: var(--rojo);
   font-size: 60px;
 }
 
-#menuMain #textoyboton{
+#menuMain #textoyboton {
   max-width: 900px;
 }
 
@@ -1056,7 +1237,7 @@ textarea {
   display: none;
 }
 
-/*-----------PÁGINA PEDIDOS------------*/
+/*-----------------------------------------PÁGINA PEDIDOS---------------------------------------------*/
 #mainOrders>div {
   display: flex;
   flex-direction: column;
@@ -1150,7 +1331,7 @@ textarea {
   font-size: 1.2em;
 }
 
-/*-------------PÁGINA SOPORTE---------------*/
+/*----------------------------------------------PÁGINA SOPORTE---------------------------------------------*/
 #bannerSoporte {
   text-align: center;
   display: flex;
@@ -1232,7 +1413,7 @@ textarea {
   background-color: var(--rojo);
 }
 
-/*-------------PÁGINA SOPORTE CONTACTO---------------*/
+/*--------------------------------------------------PÁGINA SOPORTE CONTACTO------------------------------------------------*/
 #contactSuportMain {
   display: flex;
   flex-direction: row;
@@ -1304,7 +1485,7 @@ textarea {
   cursor: pointer;
 }
 
-/*-----------PÁGINA CONFIRMAR COMPRA------------*/
+/*-------------------------------------------PÁGINA CONFIRMAR COMPRA---------------------------------------------------*/
 
 #mainCompra {
   padding: 20px;
@@ -1464,19 +1645,15 @@ textarea {
 .btnConfirmarCompra {
   margin-top: 20px;
   padding: 12px 20px;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
   gap: 10px;
-
   border: none;
   border-radius: 7px;
   background-color: var(--rojo);
   color: white;
-
   cursor: pointer;
 }
 
@@ -1502,7 +1679,7 @@ textarea {
   margin: 0;
 }
 
-/*-----------PÁGINA POLÍTICA DE PRIVACIDAD------------*/
+/*------------------------------------PÁGINA POLÍTICA DE PRIVACIDAD------------------------------------*/
 #mainPrivacidad {
   padding: 20px;
 }

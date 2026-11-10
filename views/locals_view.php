@@ -5,41 +5,109 @@
 </head>
 
 <main id="mainLocales">
-    <div>
-        <h1>Nuestros locales</h1>
+    <section class="encabezadoLocales">
+        <h1>Nuestros <strong>locales</strong></h1>
         <p>Encontrá tu Deburger más cercano</p>
-    </div>
+    </section>
 
-    <div class="buscar">
-        <i class="bi bi-search"></i>
+    <section class="contenidoLocales">
+        <div class="panelLocales">
 
-        <form action="">
-            <input type="search" name="" id="" placeholder="Buscar local"> <!--zona en la q la persona podra buscar una sucursal-->
-        </form>
-    </div>
-
-    <section id="locales"> <!--Lugar donde deberian estar todas las tarjetas de los locales-->
-        <div class="tarjetaLocal">
-            <div class="numLugar">
-                <p>1.</p>
-                <p>Lugar titulo</p>
+            <div class="buscar">
+                <i class="bi bi-search"></i>
+                <input type="search" id="buscarLocal" placeholder="Buscar por localidad o dirección...">
             </div>
 
-            <div class="direccion">
-                <i class="bi bi-geo-alt"></i>
-                <p>direccion wiwiwi</p>
+            <div class="cantidadLocales">
+                <h2>Nuestras sucursales</h2>
+                <span id="contadorLocales">3 locales</span>
             </div>
 
-            <div class="horario">
-                <i class="bi bi-clock"></i>
+            <section id="locales">
+                <article class="tarjetaLocal" data-nombre="Palermo" data-direccion="Av. Santa Fe 3200" data-horario="12:00 a 00:00" data-lat="-34.588" data-lng="-58.420">
+                    <div class="numeroLocal">01</div>
 
+                    <div class="infoLocal">
+                        <h3>Deburger Palermo</h3>
+                        <p>
+                            <i class="bi bi-geo-alt"></i>
+                            Av. Santa Fe 3200
+                        </p>
+                        <p>
+                            <i class="bi bi-clock"></i>
+                            12:00 a 00:00
+                        </p>
+                        <span class="estadoLocal">
+                            <span></span> Horario habitual
+                        </span>
+                    </div>
+                    <button type="button" class="verLocal">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                </article>
+
+                <article class="tarjetaLocal" data-nombre="Caballito" data-direccion="Av. Rivadavia 4800" ata-horario="12:00 a 00:00" data-lat="-34.619" data-lng="-58.440">
+                    <div class="numeroLocal">02</div>
+                    <div class="infoLocal">
+                        <h3>Deburger Caballito</h3>
+                        <p>
+                            <i class="bi bi-geo-alt"></i>
+                            Av. Rivadavia 4800
+                        </p>
+                        <p>
+                            <i class="bi bi-clock"></i>
+                            12:00 a 00:00
+                        </p>
+                        <span class="estadoLocal">
+                            <span></span> Horario habitual
+                        </span>
+                    </div>
+                    <button type="button" class="verLocal">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                </article>
+                <article class="tarjetaLocal" data-nombre="Belgrano" data-direccion="Av. Cabildo 2100" data-horario="12:00 a 00:00" data-lat="-34.562" data-lng="-58.456">
+                    <div class="numeroLocal">03</div>
+                    <div class="infoLocal">
+                        <h3>Deburger Belgrano</h3>
+                        <p>
+                            <i class="bi bi-geo-alt"></i>
+                            Av. Cabildo 2100
+                        </p>
+                        <p>
+                            <i class="bi bi-clock"></i>
+                            12:00 a 00:00
+                        </p>
+                        <span class="estadoLocal">
+                            <span></span> Horario habitual
+                        </span>
+                    </div>
+
+                    <button type="button" class="verLocal">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </button>
+
+                </article>
+
+                <p id="sinResultados">
+                    No encontramos locales con esa búsqueda.
+                </p>
+            </section>
+        </div>
+
+        <div class="contenedorMapa">
+            <div class="tituloMapa">
                 <div>
-                    <p>12:00 a 00:00</p>
-                    <p>Abierto</p> <!--Abierto o cerrado-->
+                    <h2>Encontranos cerca tuyo</h2>
+                    <p>Explorá nuestras ubicaciones</p>
                 </div>
+                <i class="bi bi-geo-alt-fill"></i>
             </div>
-
-            <a href="" class="btnRojo">Ver mapa</a> <!--boton q deberia dirijirte a la direccion del local-->
+            <div id="mapaLocales"></div>
+            <div class="pieMapa">
+                <i class="bi bi-info-circle"></i>
+                Seleccioná una sucursal para ver su ubicación.
+            </div>
         </div>
     </section>
 </main>

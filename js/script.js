@@ -6,7 +6,6 @@ function formatPrice(price) {
     });
 }
 
-
 // Carrito
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -43,11 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.removeItem('cartItems');
     }
 
-
     // Cargar carrito guardado
     let cartItems =
         JSON.parse(localStorage.getItem('cartItems')) || [];
-
 
     // Calcular el total de los productos guardados
     let totalAmount = cartItems.reduce(
@@ -55,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
             total + item.price * item.quantity,
         0
     );
-
 
     // Agregar productos al carrito
     addToCartButtons.forEach((button, index) => {
@@ -73,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelectorAll('.card');
 
             const card = cards[index];
-
 
             const itemName =
                 card.querySelector('.card-title').textContent;
@@ -598,7 +593,6 @@ if (editarBtn) {
 
 // Confirmar envía el formulario (config.php) y la página se recarga mostrando los datos guardados
 
-
 if (cancelarBtn) {
     cancelarBtn.addEventListener("click", () => {
         cambiarDatos.classList.remove("mostrar");
@@ -606,3 +600,123 @@ if (cancelarBtn) {
     });
 
 }
+
+//LOCALES
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const mapa = L.map("mapaLocales").setView(
+        [-34.6037, -58.3816],
+        12
+    );
+
+    L.tileLayer(
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+            attribution: '&copy; OpenStreetMap contributors'
+        }
+    ).addTo(mapa);
+
+    const tarjetas = document.querySelectorAll(".tarjetaLocal");
+    const buscador = document.getElementById("buscarLocal");
+    const sinResultados = document.getElementById("sinResultados");
+    const contador = document.getElementById("contadorLocales");
+
+    const marcadores = [];
+
+    // Crear marcadores
+    tarjetas.forEach((tarjeta, index) => {
+
+        const lat = Number(tarjeta.dataset.lat);
+        const lng = Number(tarjeta.dataset.lng);
+
+        const nombre = tarjeta.dataset.nombre;
+        const direccion = tarjeta.dataset.direccion;
+        const horario = tarjeta.dataset.horario;
+
+        const marcador = L.marker([lat, lng]).addTo(mapa);
+
+        marcador.bindPopup(`
+            <strong>${nombre}</strong>
+            <br>
+            ${direccion}
+            <br>
+            <small>${horario}</small>
+        `);
+
+        marcadores.push(marcador);
+
+        // Seleccionar local desde la tarjeta
+        tarjeta.addEventListener("click", function () {
+
+            tarjetas.forEach(t => t.classList.remove("seleccionado"));
+
+            tarjeta.classList.add("seleccionado");
+
+            mapa.flyTo([lat, lng], 15);
+
+            marcador.openPopup();
+        });
+
+    });
+
+    // Buscador de sucursales
+    buscador.addEventListener("input", function () {
+
+        const busqueda = buscador.value.toLowerCase().trim();
+
+        let encontrados = 0;
+
+        tarjetas.forEach((tarjeta, index) => {
+
+            const nombre = tarjeta.dataset.nombre.toLowerCase();
+            const direccion = tarjeta.dataset.direccion.toLowerCase();
+
+            const coincide =
+                nombre.includes(busqueda) ||
+                direccion.includes(busqueda);
+
+            tarjeta.style.display = coincide ? "flex" : "none";
+
+            if (coincide) {
+                encontrados++;
+                marcadores[index].addTo(mapa);
+            } else {
+                mapa.removeLayer(marcadores[index]);
+                tarjeta.classList.remove("seleccionado");
+            }
+
+        });
+
+        contador.textContent = encontrados + " locales";
+
+        sinResultados.style.display =
+            encontrados === 0 ? "block" : "none";
+
+    });
+
+    // Ajustar el mapa a todos los locales
+    if (marcadores.length > 0) {
+
+        const grupo = L.featureGroup(marcadores);
+
+        mapa.fitBounds(grupo.getBounds(), {
+            padding: [30, 30]
+        });
+
+    }
+
+    // Botones para ubicar cada sucursal
+    document.querySelectorAll(".verLocal").forEach(boton => {
+
+        boton.addEventListener("click", function (e) {
+
+            e.stopPropagation();
+
+            boton.closest(".tarjetaLocal").click();
+
+        });
+
+    });
+
+});
