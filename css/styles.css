@@ -405,13 +405,13 @@ footer a:hover {
 }
 
 #mainInicio>#Banner {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4) 10%, transparent), url("../img/img_inicio.png");
+  background-image: url("../img/img_inicio.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-#textoybotoninicio {
+#textoyboton {
   padding: var(--padding, 40px);
   margin-left: 8%;
   display: flex;
@@ -421,19 +421,19 @@ footer a:hover {
   max-width: 650px;
 }
 
-#textoybotoninicio h1 {
+#textoyboton h1 {
   color: white;
   font-size: 55px;
   margin: 0;
   text-transform: uppercase;
 }
 
-#textoybotoninicio h1 strong {
+#textoyboton h1 strong {
   color: var(--rojo);
   font-size: 75px;
 }
 
-#textoybotoninicio h2 {
+#textoyboton h2 {
   color: white;
   font-size: 24px;
   margin: 0;
@@ -759,6 +759,22 @@ textarea {
 /*-----------PÁGINA HACE TU PEDIDO------------*/
 #menuMain {
   width: 100%;
+}
+
+#menuMain #Banner{
+  background-image: url("../img/BannerMenu.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#menuMain #textoyboton h1{
+  font-weight: 800;
+  color: var(--rojo);
+  font-size: 60px;
+}
+
+#menuMain #textoyboton{
+  max-width: 900px;
 }
 
 #menu {

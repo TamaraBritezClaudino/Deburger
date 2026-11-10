@@ -6,6 +6,15 @@
 
 <main id="menuMain">
     <section id="Banner">
+        <div id="textoyboton">
+            <h1>
+                ¡Hace espacio para algo rico!
+            </h1>
+
+            <h2>No te quedes con las ganas</h2>
+
+            <a href="#menu" class="btnamarillo">Ver menú ⭣</a>
+        </div>
     </section>
 
     <section id="menu">
@@ -16,7 +25,7 @@
                     <h2><?php echo htmlspecialchars(ucfirst($categoria)); ?></h2>
                     <span></span>
                 </div>
-                
+
                 <section class="tarjetasMenu">
                     <?php foreach ($productos as $prod) { ?>
                         <article class="tarjetaMenu"

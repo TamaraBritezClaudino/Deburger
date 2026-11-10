@@ -6,7 +6,7 @@
 <body>
     <main id="mainInicio">
         <section id="Banner">
-            <div id="textoybotoninicio">
+            <div id="textoyboton">
                 <h1>
                     Bienvenido a
                     <br>
