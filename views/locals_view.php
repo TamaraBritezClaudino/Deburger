@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locales</title>
 </head>
-
+<!--Todavia le falta :(-->
 <main id="mainLocales">
     <section class="encabezadoLocales">
         <h1>Nuestros <strong>locales</strong></h1>
