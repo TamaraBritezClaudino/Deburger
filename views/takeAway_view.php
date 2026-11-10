@@ -32,7 +32,7 @@
                             data-id="<?php echo (int) $prod['id_producto']; ?>">
                             <div class="imagenProducto">
                                 <?php if (!empty($prod['imagen'])) { ?>
-                                    <img src="<?php echo htmlspecialchars($prod['imagen']); ?>" alt="Imagen del producto">
+                                    <img src="<?php echo htmlspecialchars($prod['imagen']); ?>" alt="<?php echo htmlspecialchars($prod['nombre']); ?>">
                                 <?php } else { ?>
                                     <i class="bi bi-image"></i>
                                 <?php } ?>
