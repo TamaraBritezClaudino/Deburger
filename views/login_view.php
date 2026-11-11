@@ -26,10 +26,10 @@
                 <input type="hidden" name="volver" value="<?php echo htmlspecialchars($_GET['volver'] ?? ($_POST['volver'] ?? '')); ?>">
 
                 <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" name="correo"  placeholder="Ingresa tu correo electrónico">
+                <input type="email" id="correo" name="correo"  placeholder="Ingresa tu correo electrónico" required>
 
                 <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña">
+                <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
 
                 <button type="submit" name="submit">
                     Iniciar sesión

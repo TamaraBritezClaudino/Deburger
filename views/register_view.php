@@ -19,26 +19,26 @@
             <div>
                 <div>
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
                 </div>
 
                 <div>
                     <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
                 </div>
 
             </div>
 
             <label for="correo">Correo electrónico</label>
-            <input type="email" id="correo" name="correo"  placeholder="Ingresa tu correo electrónico">
+            <input type="email" id="correo" name="correo"  placeholder="Ingresa tu correo electrónico" required>
 
             <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" required>
 
             <div>
                 <div>
                     <label for="fecha">Fecha de nacimiento</label>
-                    <input type="date" id="fecha" name="fecha">
+                    <input type="date" id="fecha" name="fecha" required>
                 </div>
 
                 <div>
