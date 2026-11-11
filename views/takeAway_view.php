@@ -5,6 +5,9 @@
 </head>
 
 <main id="menuMain">
+    <?php
+    /** @var array $menu */
+    ?>
     <section id="Banner">
         <div id="textoyboton">
             <h1>
