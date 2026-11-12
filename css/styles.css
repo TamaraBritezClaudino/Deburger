@@ -349,6 +349,7 @@ footer a:hover {
   flex-direction: column;
   gap: 1em;
   border-top: white solid 2px;
+  margin-bottom: 30px;
 }
 
 .sidebar.open {
@@ -367,6 +368,17 @@ footer a:hover {
   flex-direction: column;
   gap: 10px;
   margin-top: 1rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.cart-items .cart-item-image img{
+  width: 100%;
+}
+
+.cart-items .cart-item-image{
+  width: 40%;
+  margin-right: 20px;
 }
 
 .individual-cart-tems {
@@ -393,16 +405,35 @@ footer a:hover {
   font-weight: 500;
 }
 
+.cart-item{
+  padding: 20px;
+  background-color: #e8d2b4;
+  border-radius: 20px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
 .cart-item-info {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  color: black;
+}
+
+.cart-item-info h4, .cart-item-info p, .cart-item-info span, .cart-item-info strong{
+  color: black;
 }
 
 .cart-item-bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.quantity-btn{
+  width: 35px;
+  height: 35px;
 }
 
 /*--------------------------------------------PÁGINA INICIO-----------------------------------------------*/
