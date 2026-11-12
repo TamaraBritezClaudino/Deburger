@@ -66,21 +66,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const cards =
-                document.querySelectorAll('.card');
+                document.querySelectorAll('.tarjetaMenu');
 
             const card = cards[index];
 
             const itemName =
-                card.querySelector('.card-title').textContent;
-
+                card.querySelector('h3').textContent.trim();
 
             const itemPrice = parseFloat(
-                card.querySelector('.price').textContent
+                card.querySelector('.precioProducto p')
+                    .textContent
                     .replace('$', '')
-                    .replace('.', '')
+                    .replace(/\./g, '')
                     .replace(',', '.')
             );
-
 
             const image =
                 card.querySelector('img');
@@ -88,15 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemImage =
                 image ? image.src : '';
 
-
-            const descriptionElement =
-                card.querySelector('.card-description');
-
-
             const itemDescription =
-                descriptionElement
-                    ? descriptionElement.textContent
-                    : 'Producto seleccionado';
+                card.querySelector('.descripcionProducto')
+                    .textContent.trim();
 
 
             const item = {
@@ -602,6 +595,20 @@ if (cancelarBtn) {
 }
 
 //LOCALES
+document.addEventListener("DOMContentLoaded", function () {
+
+    const contenedorMapa =
+        document.getElementById("mapaLocales");
+
+    if (!contenedorMapa) {
+        return;
+    }
+
+    const mapa = L.map("mapaLocales").setView(
+        [-34.6037, -58.3816],
+        12
+    );
+});
 
 document.addEventListener("DOMContentLoaded", function () {
 

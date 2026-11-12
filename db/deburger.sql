@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2026 a las 23:08:10
+-- Tiempo de generación: 13-11-2026 a las 00:20:09
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -46,7 +46,7 @@ DELIMITER ;
 CREATE TABLE `categorias` (
   `id_categoria` int(11) NOT NULL,
   `nombre` varchar(100) DEFAULT NULL
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `categorias`
@@ -98,7 +98,7 @@ CREATE TABLE `detalle_pedidos` (
   `id_pedido` int(11) DEFAULT NULL,
   `cantidad` int(11) DEFAULT NULL,
   `id_producto` int(11) DEFAULT NULL
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `detalle_pedidos`
@@ -157,6 +157,37 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `locales`
+--
+
+CREATE TABLE `locales` (
+  `id_local` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `localidad` varchar(100) NOT NULL,
+  `direccion` varchar(255) NOT NULL,
+  `hora_apertura` time NOT NULL,
+  `hora_cierre` time NOT NULL,
+  `estado_abierto` tinyint(1) DEFAULT 0,
+  `latitud` decimal(10,7) NOT NULL,
+  `longitud` decimal(10,7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `locales`
+--
+
+INSERT INTO `locales` (`id_local`, `nombre`, `localidad`, `direccion`, `hora_apertura`, `hora_cierre`, `estado_abierto`, `latitud`, `longitud`) VALUES
+(1, 'Deburger Palermo', 'Palermo', 'Av. Santa Fe 3200', '12:00:00', '00:00:00', 1, -34.5880000, -58.4200000),
+(2, 'Deburger Caballito', 'Caballito', 'Av. Rivadavia 4800', '12:00:00', '00:00:00', 1, -34.6190000, -58.4400000),
+(3, 'Deburger Belgrano', 'Belgrano', 'Av. Cabildo 2100', '12:00:00', '00:00:00', 1, -34.5620000, -58.4560000),
+(4, 'Deburger Almagro', 'Almagro', 'Av. Corrientes 3900', '12:00:00', '00:00:00', 1, -34.6040000, -58.4210000),
+(5, 'Deburger Recoleta', 'Recoleta', 'Av. Callao 1200', '12:00:00', '00:00:00', 1, -34.5940000, -58.3940000),
+(6, 'Deburger Flores', 'Flores', 'Av. Rivadavia 6800', '12:00:00', '00:00:00', 1, -34.6350000, -58.4630000),
+(7, 'Deburger Villa Crespo', 'Villa Crespo', 'Av. Corrientes 5200', '12:00:00', '00:00:00', 1, -34.5980000, -58.4380000);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `pedidos`
 --
 
@@ -168,7 +199,7 @@ CREATE TABLE `pedidos` (
   `total` decimal(10,2) DEFAULT NULL,
   `estado` varchar(255) DEFAULT NULL,
   `tipo_entrega` varchar(20) DEFAULT NULL
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `pedidos`
@@ -207,7 +238,7 @@ CREATE TABLE `productos` (
   `precio` decimal(10,2) DEFAULT NULL,
   `descripcion` varchar(255) NOT NULL,
   `imagen` varchar(255) DEFAULT NULL
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `productos`
@@ -264,6 +295,12 @@ ALTER TABLE `detalle_pedidos`
   ADD KEY `id_producto` (`id_producto`);
 
 --
+-- Indices de la tabla `locales`
+--
+ALTER TABLE `locales`
+  ADD PRIMARY KEY (`id_local`);
+
+--
 -- Indices de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
@@ -285,7 +322,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
@@ -297,19 +334,25 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `detalle_pedidos`
 --
 ALTER TABLE `detalle_pedidos`
-  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_detalle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `locales`
+--
+ALTER TABLE `locales`
+  MODIFY `id_local` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Restricciones para tablas volcadas

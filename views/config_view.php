@@ -10,7 +10,7 @@
     <div class="mostrarDatos">
         <div class="datos">
             <h2>Datos personales</h2>
-            <button class="btnRojo">
+            <button class="btnRojo" id="editarBtn" type="button">
                 <i class="bi bi-pen"></i>
                 <p>Editar</p>
             </button>
@@ -92,7 +92,7 @@
                 <p>Confirmar</p>
             </button>
 
-            <button class="cancelarbtn" id="cancelarBtn">
+            <button class="cancelarbtn" id="cancelarBtn" type="button">
                 <i class="bi bi-x-lg"></i>
                 <p>Cancelar</p>
             </button>
