@@ -946,6 +946,22 @@ textarea {
   margin-right: 5px;
 }
 
+.estadoLocal.abierto {
+  color: #65cf82;
+}
+
+.estadoLocal.abierto span {
+  background-color: #65cf82;
+}
+
+.estadoLocal.cerrado {
+  color: #e66b6b;
+}
+
+.estadoLocal.cerrado span {
+  background-color: #e66b6b;
+}
+
 /*-------------------------------------PÁGINA HACE TU PEDIDO----------------------------------------------*/
 #menuMain {
   width: 100%;
