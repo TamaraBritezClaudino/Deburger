@@ -597,21 +597,6 @@ if (cancelarBtn) {
 //LOCALES
 document.addEventListener("DOMContentLoaded", function () {
 
-    const contenedorMapa =
-        document.getElementById("mapaLocales");
-
-    if (!contenedorMapa) {
-        return;
-    }
-
-    const mapa = L.map("mapaLocales").setView(
-        [-34.6037, -58.3816],
-        12
-    );
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-
     const mapa = L.map("mapaLocales").setView(
         [-34.6037, -58.3816],
         12

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-11-2026 a las 00:20:09
+-- Tiempo de generación: 13-11-2026 a las 00:24:04
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -85,7 +85,7 @@ INSERT INTO `clientes` (`id_cliente`, `nombre`, `apellido`, `telefono`, `direcci
 (1, 'Ana', 'Reyes', '1131169015', NULL, 'ana@ana', '276b6c4692e78d4799c12ada515bc3e4', '8345-09-17', 3, 1),
 (4, 'fede', 'Reyes', '2147483647', NULL, 'fede@fede', 'c4ca4238a0b923820dcc509a6f75849b', '0000-00-00', 2, 0),
 (6, 'pablo', 'fiscella', '2147483647', NULL, 'p@p', '83878c91171338902e0fe0fb97a8c47a', '5653-02-04', 0, 0),
-(10, 'Tamara', 'Britez', NULL, NULL, 'tami@gmail.com', '202cb962ac59075b964b07152d234b70', '0000-00-00', 0, 0);
+(10, 'Tamara', 'Britez', '557773446753', 'Dirección ficticia 123', 'tami@gmail.com', '202cb962ac59075b964b07152d234b70', '0000-00-00', 0, 0);
 
 -- --------------------------------------------------------
 
