@@ -6,7 +6,6 @@
 </head>
 
 <main id="mainLocales">
-
     <?php
     /** @var array $locales */
     ?>
@@ -35,9 +34,7 @@
             </div>
 
             <section id="locales">
-
                 <?php foreach ($locales as $i => $local) { ?>
-
                     <article class="tarjetaLocal"
                         data-id="<?php echo (int) $local['id_local']; ?>"
                         data-nombre="<?php echo htmlspecialchars($local['localidad'], ENT_QUOTES, 'UTF-8'); ?>"
@@ -67,21 +64,15 @@
                             </p>
 
                             <span class="estadoLocal <?php echo $local['estado_abierto'] ? 'abierto' : 'cerrado'; ?>">
-
                                 <span></span>
-
                                 <?php echo $local['estado_abierto'] ? 'Abierto ahora' : 'Cerrado ahora'; ?>
-
                             </span>
-
                         </div>
 
                         <button type="button" class="verLocal">
                             <i class="bi bi-arrow-up-right"></i>
                         </button>
-
                     </article>
-
                 <?php } ?>
 
                 <p id="sinResultados">
@@ -92,24 +83,20 @@
         </div>
 
         <div class="contenedorMapa">
-
             <div class="tituloMapa">
                 <div>
                     <h2>Encontranos cerca tuyo</h2>
                     <p>Explorá nuestras ubicaciones</p>
                 </div>
-
                 <i class="bi bi-geo-alt-fill"></i>
             </div>
-
+            
             <div id="mapaLocales"></div>
 
             <div class="pieMapa">
                 <i class="bi bi-info-circle"></i>
                 Seleccioná una sucursal para ver su ubicación.
             </div>
-
         </div>
-
     </section>
 </main>

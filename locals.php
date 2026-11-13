@@ -38,6 +38,6 @@
     $locales[] = $local;
  }
 
- $section = "views/locales";
+ $section = "views/locals";
  require_once "views/layout.php";
 ?>
