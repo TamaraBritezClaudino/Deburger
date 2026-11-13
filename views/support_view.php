@@ -12,7 +12,7 @@
 
     <section id="ayuda">
         <section id="tarjetasSoporte">
-            <a href="#">
+            <a href="faq.php">
                 <i class="bi bi-question-circle"></i>
                 <div>
                     <h2>Preguntas frecuentes</h2>

@@ -51,20 +51,7 @@
                 <label>Método de pago:</label>
 
                 <div class="metodosPago">
-                    <label>
-                        <input
-                            type="radio"
-                            name="metodoPago"
-                            value="efectivo" required>
-                        <span>Efectivo</span>
-                    </label>
-                    <label>
-                        <input
-                            type="radio"
-                            name="metodoPago"
-                            value="tarjeta">
-                        <span>Tarjeta de crédito/débito</span>
-                    </label>
+                    Solo disponible efectivo por el momento.
                 </div>
             </div>
 
