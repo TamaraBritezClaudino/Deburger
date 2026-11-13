@@ -44,14 +44,27 @@
 
             <div class="campoCompleto">
                 <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu dirección" value="<?php echo htmlspecialchars($_SESSION['usuario']['direccion'] ?? '') ?>">
+                <input type="text" id="direccion" name="direccion" placeholder="Ingrese una dirección" value="<?php echo htmlspecialchars($_SESSION['usuario']['direccion'] ?? '') ?>">
             </div>
 
             <div class="campoCompleto">
                 <label>Método de pago:</label>
 
                 <div class="metodosPago">
-                    Solo efectivo disponible por el momento.
+                    <label>
+                        <input
+                            type="radio"
+                            name="metodoPago"
+                            value="efectivo" required>
+                        <span>Efectivo</span>
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="metodoPago"
+                            value="tarjeta">
+                        <span>Tarjeta de crédito/débito</span>
+                    </label>
                 </div>
             </div>
 
