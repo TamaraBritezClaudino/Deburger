@@ -1504,6 +1504,63 @@ textarea {
   background-color: var(--rojo);
 }
 
+#infoCorporativa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3% 5%;
+  gap: 1em;
+}
+
+#infoCorporativa>h2 {
+  color: var(--amarilloClaro);
+  font-size: 30px;
+}
+
+#tarjetasCorporativas {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 2%;
+}
+
+#tarjetasCorporativas a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  border: white solid 1px;
+  border-radius: 20px;
+  padding: 25px;
+  gap: 1em;
+  width: 70%;
+  transition: transform 0.5s;
+}
+
+#tarjetasCorporativas a:hover {
+  transform: translateY(-10px);
+}
+
+#tarjetasCorporativas a div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#tarjetasCorporativas h2 {
+  color: var(--amarilloClaro);
+}
+
+#tarjetasCorporativas i {
+  font-size: 50px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: var(--rojo);
+}
+
+
 /*--------------------------------------------------PÁGINA SOPORTE CONTACTO------------------------------------------------*/
 #contactSuportMain {
   display: flex;
@@ -1866,4 +1923,38 @@ textarea {
   margin-top: 30px;
   font-size: 0.9em;
   opacity: 0.7;
+}
+
+/*------------------------------------Terminos y condiciones------------------------------*/
+#contenidoTerminos {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.7;
+  text-align: justify;
+  padding: 20px;
+}
+
+#contenidoTerminos>p {
+  margin-bottom: 25px;
+}
+
+.fechaActualizacion {
+  text-align: center;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.termino {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.termino h2 {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.termino p {
+  margin-bottom: 10px;
 }
