@@ -44,14 +44,14 @@
 
             <div class="campoCompleto">
                 <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" placeholder="<?php echo htmlspecialchars($_SESSION['usuario']['direccion'] ?? '') ?>">
+                <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu dirección" value="<?php echo htmlspecialchars($_SESSION['usuario']['direccion'] ?? '') ?>">
             </div>
 
             <div class="campoCompleto">
                 <label>Método de pago:</label>
 
                 <div class="metodosPago">
-                    Solo disponible efectivo por el momento.
+                    Solo efectivo disponible por el momento.
                 </div>
             </div>
 
