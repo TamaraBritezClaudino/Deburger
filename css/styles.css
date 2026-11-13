@@ -824,6 +824,8 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  overflow-y: scroll;
+  max-height: 480px;
 }
 
 .tarjetaLocal {

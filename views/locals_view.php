@@ -48,21 +48,17 @@
                         </div>
 
                         <div class="infoLocal">
-
                             <h3>
                                 <?php echo htmlspecialchars($local['nombre']); ?>
                             </h3>
-
                             <p>
                                 <i class="bi bi-geo-alt"></i>
                                 <?php echo htmlspecialchars($local['direccion']); ?>
                             </p>
-
                             <p>
                                 <i class="bi bi-clock"></i>
                                 <?php echo htmlspecialchars($local['horario']); ?>
                             </p>
-
                             <span class="estadoLocal <?php echo $local['estado_abierto'] ? 'abierto' : 'cerrado'; ?>">
                                 <span></span>
                                 <?php echo $local['estado_abierto'] ? 'Abierto ahora' : 'Cerrado ahora'; ?>

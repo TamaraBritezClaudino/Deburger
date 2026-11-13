@@ -5,84 +5,52 @@
 </head>
 
 <main id="mainCompra">
-
     <h1>Confirmar compra</h1>
 
     <form action="" method="POST" class="contenidoCompra">
-
         <input type="hidden" name="carrito" id="carritoInput">
 
         <section class="datosCompra">
-
             <div class="tituloCompra">
                 <div class="iconoCompra">
                     <i class="bi bi-person"></i>
                 </div>
-
                 <h2>Datos para el pedido</h2>
             </div>
 
             <hr>
 
             <div class="filaDatos">
-
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Ingresa tu nombre">
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
                 </div>
-
                 <div>
                     <label for="apellido">Apellido:</label>
-                    <input
-                        type="text"
-                        id="apellido"
-                        name="apellido"
-                        placeholder="Ingresa tu apellido">
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
                 </div>
-
             </div>
 
             <div class="filaDatos">
-
                 <div>
                     <label for="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Ingresa tu correo electrónico">
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
                 </div>
-
                 <div>
                     <label for="telefono">Teléfono:</label>
-                    <input
-                        type="tel"
-                        id="telefono"
-                        name="telefono"
-                        placeholder="Ingresa tu número">
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número">
                 </div>
-
             </div>
 
             <div class="campoCompleto">
                 <label for="direccion">Dirección:</label>
-
-                <input
-                    type="text"
-                    id="direccion"
-                    name="direccion"
-                    placeholder="Ingresa tu dirección">
+                <input type="text" id="direccion" name="direccion" placeholder="<?php echo htmlspecialchars($_SESSION['usuario']['direccion'] ?? '') ?>">
             </div>
 
             <div class="campoCompleto">
                 <label>Método de pago:</label>
 
                 <div class="metodosPago">
-
                     <label>
                         <input
                             type="radio"
@@ -90,7 +58,6 @@
                             value="efectivo" required>
                         <span>Efectivo</span>
                     </label>
-
                     <label>
                         <input
                             type="radio"
@@ -98,7 +65,6 @@
                             value="tarjeta">
                         <span>Tarjeta de crédito/débito</span>
                     </label>
-
                 </div>
             </div>
 
@@ -106,44 +72,27 @@
                 <p><?php echo htmlspecialchars($error); ?></p>
             <?php } ?>
 
-            <button
-                type="submit"
-                name="confirmar"
-                class="btnConfirmarCompra">
-
+            <button type="submit" name="confirmar" class="btnConfirmarCompra">
                 <p>Confirmar pedido</p>
                 <i class="bi bi-check-lg"></i>
-
             </button>
 
         </section>
 
-
         <section class="resumenCompra">
-
             <div class="tituloCompra">
-
                 <div class="iconoCompra">
                     <i class="bi bi-bag"></i>
                 </div>
-
                 <h2>Tu pedido</h2>
-
             </div>
-
             <hr>
-
             <div id="productosCompra"></div>
-
             <hr>
-
             <div class="totalCompra">
                 <p>Total</p>
                 <strong id="totalCompra">$0</strong>
             </div>
-
         </section>
-
     </form>
-
 </main>
