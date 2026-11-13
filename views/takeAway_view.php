@@ -61,6 +61,10 @@
                             </div>
                         </article>
                     <?php } ?>
+                    <div id="notificacionCarrito" class="notificacion-carrito">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>¡Se agregó al carrito!</span>
+                    </div>
                 </section>
             </section>
         <?php } ?>

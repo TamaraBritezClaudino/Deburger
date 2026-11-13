@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const continueButton =
         document.querySelector('.continue-btn');
 
+    const notificacion =
+        document.getElementById('notificacionCarrito');
+
+    let tiempoNotificacion;
 
     // Sin sesión iniciada no se conserva ningún carrito
     if (!window.USUARIO_LOGUEADO) {
@@ -108,20 +112,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
 
             if (existingItem) {
-
                 existingItem.quantity++;
-
             }
 
             else {
-
                 cartItems.push(item);
-
             }
 
             totalAmount += item.price;
             updateCartUI();
 
+            // Mostrar notificación
+            if (notificacion) {
+                notificacion.classList.add('mostrar');
+
+                clearTimeout(tiempoNotificacion);
+
+                tiempoNotificacion = setTimeout(() => {
+                    notificacion.classList.remove('mostrar');
+                }, 2500);
+            }
         });
     });
 
@@ -328,6 +338,10 @@ document.addEventListener('DOMContentLoaded', () => {
             sidebar.classList.remove('open');
         });
     }
+
+    totalAmount += item.price;
+    updateCartUI();
+
     // Mostrar el carrito guardado al cargar
     updateCartUI();
 });
