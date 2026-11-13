@@ -23,28 +23,28 @@
             <div class="filaDatos">
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" value="<?php echo htmlspecialchars($_SESSION['usuario']['nombre'] ?? '') ?>" required>
                 </div>
                 <div>
                     <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" value="<?php echo htmlspecialchars($_SESSION['usuario']['apellido'] ?? '') ?>" required>
                 </div>
             </div>
 
             <div class="filaDatos">
                 <div>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" value="<?php echo htmlspecialchars($_SESSION['usuario']['email'] ?? '') ?>" required>
                 </div>
                 <div>
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número">
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número" value="<?php echo htmlspecialchars($_SESSION['usuario']['telefono'] ?? '') ?>">
                 </div>
             </div>
 
             <div class="campoCompleto">
                 <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" placeholder="Ingrese una dirección" value="<?php echo htmlspecialchars($_SESSION['usuario']['direccion'] ?? '') ?>">
+                <input type="text" id="direccion" name="direccion" placeholder="Ingrese una dirección" value="<?php echo htmlspecialchars($_SESSION['usuario']['direccion'] ?? '') ?>" required>
             </div>
 
             <div class="campoCompleto">
